@@ -1,0 +1,103 @@
+apply plugin: 'groovy'
+apply plugin: 'war'
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+import org.akhikhl.gretty.AppStopTask
+
+farm {
+	webapp "org.jasig.cas:cas-server-webapp:$cas_version", contextPath: '/cas', inplace: true
+	webapp "org.jasig.cas:cas-management-webapp:$cas_version", contextPath: '/cas-services', inplace: true
+	webapp ':protected-web-app'
+	
+	afterEvaluate {
+		project.tasks.farmAfterIntegrationTest.dependsOn 'build'
+	}
+}
+
+buildscript {
+	repositories {
+		jcenter()
+		maven { url 'http://oss.sonatype.org/content/repositories/releases/' }
+	}
+  
+	dependencies {
+		classpath "org.akhikhl.gretty:gretty:$gretty_version"
+	}
+}
+  
+repositories {
+	jcenter()
+	// enable this to use snapshot versions of Gretty:
+	maven { url 'http://oss.sonatype.org/content/repositories/releases/' }
+}
+
+test {
+	include '**/*Spec*.*'
+}
+
+task integrationTest(type: Test, dependsOn: 'test') {
+	outputs.upToDateWhen { false }
+	include '**/*Spec*.*'
+	// specific to concrete test harness
+	doFirst {
+		systemProperty 'geb.build.reportsDir', reporting.file('geb')
+	}
+}
+
+// This empty AppStopTask task makes Jetty shutdown if any of the tests fail.  
+// This may be a bug in Gretty (https://github.com/akhikhl/gretty/issues/214) 
+// or Gradle (https://issues.gradle.org/browse/GRADLE-2263)
+task ('shutdownHook', type: AppStopTask) << {
+}
+
+// afterEvaluate makes sure the empty shutdownHook task runs when the test task exits
+// from execution.
+project.afterEvaluate {
+	project.tasks.test.finalizedBy shutdownHook
+}
+
+dependencies {
+	// specific to concrete test harness
+	testCompile "org.codehaus.groovy:groovy-all:$groovy_version"
+	testCompile "org.spockframework:spock-core:$spock_version"
+	testCompile "org.gebish:geb-spock:$gebVersion"
+	testCompile "org.seleniumhq.selenium:selenium-support:$seleniumVersion"
+	testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
+	testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
+	testCompile "org.seleniumhq.selenium:selenium-ie-driver:$seleniumVersion"
+	testCompile "org.seleniumhq.selenium:selenium-safari-driver:$seleniumVersion"
+	testCompile "org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion"
+}
+
+gretty {
+	systemProperty 'service.registry.config.location', './etc/services'
+	systemProperty 'server.name', 'https://localhost:8443'
+	systemProperty 'cas.host', 'https://localhost:8443'
+	//systemProperty 'server.name', 'http://localhost:8080'
+	//systemProperty 'cas.host', 'http://localhost:8080'
+	systemProperty 'server.prefix', '${server.name}/cas'
+	systemProperty 'cas.prefix', '${cas.host}/cas'
+	systemProperty 'cas.securityContext.casProcessingFilterEntryPoint.loginUrl', '${cas.prefix}/login'
+	systemProperty 'cas.securityContext.ticketValidator.casServerUrlPrefix', '${cas.prefix}'
+	systemProperty 'cas-management.host', 'https://localhost:8443'
+	//systemProperty 'cas-management.host', 'http://localhost:8080'
+	systemProperty 'cas-management.prefix', '${cas.host}/cas-services'
+	systemProperty 'cas-management.securityContext.serviceProperties.service', '${cas-management.prefix}/callback'
+	systemProperty 'cas-management.securityContext.serviceProperties.adminRoles', 'ROLE_ADMIN'
+	systemProperty 'pac4j.callback.defaultUrl', '/manage.html'
+	
+	//sslKeyStorePath = '/Users/william.crowell/Downloads/apache-tomcat-8.0.32/conf/keystore'
+	sslKeyStorePath = './etc/jetty/keystore'
+	sslKeyStorePassword = 'changeit'
+	sslKeyManagerPassword = 'changeit'
+	sslTrustStorePath = './etc/jetty/keystore'
+	sslTrustStorePassword = 'changeit'
+	integrationTestTask = 'integrationTest'
+	
+	systemProperty 'user.details.file.location', 'file:/etc/cas/user-details.properties'
+	
+	httpsEnabled = true
+	httpEnabled = true
+}
+
+apply plugin: 'org.akhikhl.gretty'
+

@@ -1,0 +1,24 @@
+apply plugin: 'groovy'
+apply plugin: 'war'
+
+buildscript {
+	repositories {
+		jcenter()
+		maven { url 'http://oss.sonatype.org/content/repositories/releases/' }
+	}
+}
+
+repositories {
+	jcenter()
+	// enable this to use snapshot versions of Gretty:
+	maven { url 'http://oss.sonatype.org/content/repositories/releases/' }
+}
+
+dependencies {
+	compile('org.jasig.cas.client:cas-client-core:3.4.1') {
+		exclude module: "javax.servlet:servlet-api"
+	}
+	compile 'org.jasig.cas.client:cas-client-support-saml:3.4.1'
+}
+
+apply plugin: 'org.akhikhl.gretty'
