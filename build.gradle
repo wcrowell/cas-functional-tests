@@ -84,16 +84,14 @@ gretty {
 	systemProperty 'cas-management.securityContext.serviceProperties.service', '${cas-management.prefix}/callback'
 	systemProperty 'cas-management.securityContext.serviceProperties.adminRoles', 'ROLE_ADMIN'
 	systemProperty 'pac4j.callback.defaultUrl', '/manage.html'
-	
-	//sslKeyStorePath = '/Users/william.crowell/Downloads/apache-tomcat-8.0.32/conf/keystore'
+	systemProperty 'log4j.configurationFile', './etc/jetty/log4j2.xml'
+	systemProperty 'accept.authn.users', 'casuser::Mellon,scott::password,bob::password2'
 	sslKeyStorePath = './etc/jetty/keystore'
 	sslKeyStorePassword = 'changeit'
 	sslKeyManagerPassword = 'changeit'
 	sslTrustStorePath = './etc/jetty/keystore'
 	sslTrustStorePassword = 'changeit'
 	integrationTestTask = 'integrationTest'
-	
-	systemProperty 'user.details.file.location', 'file:/etc/cas/user-details.properties'
 	
 	httpsEnabled = true
 	httpEnabled = true

@@ -23,6 +23,7 @@ class RenewSpec extends CommonGebSpec {
 		// Visit /login?service=bar&renew=true
 		to RenewPage
 		
-		loginAs(properties.username, properties.password)
+		// Login as user B
+		loginAs(properties.usernameb, properties.passwordb)
     }
 }
