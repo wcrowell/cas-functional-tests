@@ -86,6 +86,7 @@ gretty {
 	systemProperty 'pac4j.callback.defaultUrl', '/manage.html'
 	systemProperty 'log4j.configurationFile', './etc/jetty/log4j2.xml'
 	systemProperty 'accept.authn.users', 'casuser::Mellon,scott::password,bob::password2'
+	systemProperty 'user.details.file.location', 'file:./etc/user-details.properties'
 	sslKeyStorePath = './etc/jetty/keystore'
 	sslKeyStorePassword = 'changeit'
 	sslKeyManagerPassword = 'changeit'
