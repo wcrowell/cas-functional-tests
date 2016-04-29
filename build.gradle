@@ -86,7 +86,14 @@ gretty {
 	systemProperty 'pac4j.callback.defaultUrl', '/manage.html'
 	systemProperty 'log4j.configurationFile', './etc/jetty/log4j2.xml'
 	systemProperty 'accept.authn.users', 'casuser::Mellon,scott::password,bob::password2'
+
+	systemProperty 'tgc.encryption.key', '1PbwSbnHeinpkZOSZjuSJ8yYpUrInm5aaV18J2Ar4rM'
+	systemProperty 'tgc.signing.key', 'szxK-5_eJjs-aUj-64MpUZ-GPPzGLhYPLGl0wrYjYNVAGva2P0lLe6UGKGM7k8dWxsOVGutZWgvmY3l5oVPO3w'
+	systemProperty 'tgc.name', 'TGC'
+	systemProperty 'create.sso.renewed.authn', 'true'
+	
 	systemProperty 'user.details.file.location', 'file:./etc/user-details.properties'
+	
 	sslKeyStorePath = './etc/jetty/keystore'
 	sslKeyStorePassword = 'changeit'
 	sslKeyManagerPassword = 'changeit'

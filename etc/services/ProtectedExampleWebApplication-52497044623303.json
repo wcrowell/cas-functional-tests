@@ -6,7 +6,7 @@
   "description" : "Services Management Web Application",
   "proxyPolicy" : {
     "@class" : "org.jasig.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
-    "pattern" : "^https://.+"
+    "pattern" : "^https?://.*"
   },
   "evaluationOrder" : 1,
   "usernameAttributeProvider" : {
@@ -14,12 +14,7 @@
   },
   "logoutType" : "BACK_CHANNEL",
   "attributeReleasePolicy" : {
-    "@class" : "org.jasig.cas.services.ReturnAllowedAttributeReleasePolicy",
-    "principalAttributesRepository" : {
-      "@class" : "org.jasig.cas.authentication.principal.DefaultPrincipalAttributesRepository"
-    },
-    "authorizedToReleaseCredentialPassword" : false,
-    "authorizedToReleaseProxyGrantingTicket" : false
+    "@class" : "org.jasig.cas.services.ReturnAllAttributeReleasePolicy"
   },
   "accessStrategy" : {
     "@class" : "org.jasig.cas.services.DefaultRegisteredServiceAccessStrategy",

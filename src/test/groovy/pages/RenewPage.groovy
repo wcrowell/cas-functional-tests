@@ -7,7 +7,7 @@ class RenewPage extends LoginPage {
 
 	String getPageUrl() {
 		def properties = browser.config.rawConfig.properties
-		def baseURL = getBrowser().getConfig().getBaseUrl()
+		def baseURL = browser.config.baseUrl
 		url = "/" + properties."cas.context.root" + "/login?service=$baseURL/protected-web-app/&renew=true"
 	}
 }
