@@ -17,9 +17,6 @@ class AdminPage extends Page {
 	
 	String getPageUrl() {
 		def properties = browser.config.rawConfig.properties
-		println "88888"
-		println "$properties.service"
-		println "99999"
 		url = "/$properties.service"
 	}
 }

@@ -66,6 +66,7 @@ dependencies {
 	testCompile "org.seleniumhq.selenium:selenium-ie-driver:$seleniumVersion"
 	testCompile "org.seleniumhq.selenium:selenium-safari-driver:$seleniumVersion"
 	testCompile "org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion"
+	testCompile "org.codehaus.groovy.modules.http-builder:http-builder:0.7.1"
 }
 
 gretty {

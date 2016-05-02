@@ -1,28 +1,53 @@
 import pages.LoginPageWithService
-import pages.ProtectedWebAppPage
-import pages.RenewPage
+import groovyx.net.http.URIBuilder
 
 class RenewSpec extends CommonGebSpec {
+	def baseUrl = browser.config.baseUrl
+	
 	def setup() {
 		super
-		to ProtectedWebAppPage
+		def properties = browser.config.rawConfig.properties
+ 		// Visit /login?service=foo
+		url = "/" + properties."cas.context.root" + "/login?service=$baseUrl/protected-web-app/"
+		go url
 	}
 
     def "Logging in as someone else"() {
-		sleep(60000)
- 		// Visit /login?service=foo
 		given:
         at LoginPageWithService
 
+		// Submit correct credentials for user A
         when: "submit correct credentials for user A"
-		loginAs(properties.usernameb, properties.passwordb)
-        // "you should be redirected to foo with a valid service ticket"
-
-		// Visit /login?service=bar&renew=true
-		to RenewPage
+		loginAs(properties.usernamea, properties.passworda)
+		// You should be redirected to foo
 		
-		// Login as user B
-		loginAs(properties.usernamec, properties.passwordc)
+		def builder = new URIBuilder(browser.driver.currentUrl);
+		assert builder.query.ticket != null
+		def userATicketId = builder.query.ticket
+		println "User A Ticket ID: " + userATicketId
+
+		// Logout of the app to invalidate session and logout of SSO.  
+		// Note: This must be done or the renew does not work right.	
+		go "/protected-web-app/logout.jsp"
+		go "/$contextRoot/logout"
+		
+		// Visit /login?service=bar&renew=true
+		go "/" + properties."cas.context.root" + "/login?service=$baseUrl/protected-web-app/&renew=true"
+				
+		// You should be prompted for username and password.
+		
+        at LoginPageWithService
+		// Submit correct credentials for user B
+		loginAs(properties.usernameb, properties.passwordb)
+		
+		builder = new URIBuilder(browser.driver.currentUrl);
+		assert builder.query.ticket != null
+		def userBTicketId = builder.query.ticket
+		println "User B Ticket ID: " + userBTicketId
+
+		// You should receive a new TGT and a service ticket for user B. 
+		// The TGT cookie for user A should be destroyed.
+		assert userATicketId != userBTicketId
 		
 		then: "end"
     }
