@@ -20,7 +20,6 @@ class GatewaySpec extends CommonGebSpec {
 
         then: "you should be redirected to foo with a valid service ticket"
         at AdminPage
-		String gatewayCookieValue = verifyCookie(properties."cookie.name")
 
 		// Visit /login?service=bar&gateway=true
 		to GatewayPage

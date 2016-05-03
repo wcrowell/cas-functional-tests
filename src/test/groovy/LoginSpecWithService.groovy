@@ -28,7 +28,7 @@ class LoginSpecWithService extends CommonGebSpec {
 		
 		// Verify that CAS overwrote the TGT cookie
 		def newCookie = driver.manage().getCookieNamed(properties."cookie.name")
-		assert newCookie == null
+		assert newCookie != cookieValue
 		
 		// Visit /login?service=foo
 		to LoginPageWithService
