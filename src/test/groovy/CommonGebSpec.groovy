@@ -1,5 +1,6 @@
 import geb.spock.GebSpec
 import pages.LoginPage
+import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
 class CommonGebSpec extends GebSpec {
 	static def cachedDriver // static variable will store our single driver instance
@@ -9,6 +10,10 @@ class CommonGebSpec extends GebSpec {
 	def setup() {
 		contextRoot = properties."cas.context.root"
 		driver = cachedDriver   // each test should use our cached browser instance
+		
+		if (driver instanceof HtmlUnitDriver) {
+			driver.javascriptEnabled = true
+		}
 	}
 
 	// Browser is being reused, thus, logout from the application after

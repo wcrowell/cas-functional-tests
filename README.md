@@ -6,10 +6,11 @@
 # CAS function tests for validating the cas-server-webapp and cas-management-webapp artifacts to exercise the latest versions of CAS.  
 
 # Requirements
-* JDK 1.7+
+* JDK 1.7
 * Groovy 2.4.4+
 * Gradle 2.10+
-
+* Google Chrome (For more details see: https://sites.google.com/a/chromium.org/chromedriver/getting-started)
+* Note: If you are using this set of tests in a headless environment (console-based), then please change the driver from ChromeDriver to HtmlUnitDriver in lines 29 and 30 of src/test/resources/GebConfig.groovy.  
 
 # Build
 

@@ -4,6 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.firefox.FirefoxDriver
 import org.openqa.selenium.ie.InternetExplorerDriver
 import org.openqa.selenium.safari.SafariDriver
+import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
 
 Properties testProperties = new Properties()
@@ -24,7 +25,10 @@ baseUrl = "$properties.protocol://$properties.host:$properties.port"
 
 // default driver...
 System.setProperty('webdriver.chrome.driver', "src/test/resources/chromedriver")
-driver = {new ChromeDriver()}
+driver = {
+//	new ChromeDriver()
+	new HtmlUnitDriver()
+}
 
 environments {
     // specify environment via -Dgeb.env=ie

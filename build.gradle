@@ -94,12 +94,13 @@ gretty {
 	systemProperty 'create.sso.renewed.authn', 'true'
 	
 	systemProperty 'user.details.file.location', 'file:./etc/user-details.properties'
-	
-	sslKeyStorePath = './etc/jetty/keystore'
+
+	systemProperty 'javax.net.ssl.trustStore', "${project.projectDir}/etc/jetty/keystore"
+	systemProperty 'javax.net.ssl.trustStorePassword', 'changeit'
+
+	sslKeyStorePath = "${project.projectDir}/etc/jetty/keystore"
 	sslKeyStorePassword = 'changeit'
-	sslKeyManagerPassword = 'changeit'
-	sslTrustStorePath = './etc/jetty/keystore'
-	sslTrustStorePassword = 'changeit'
+
 	integrationTestTask = 'integrationTest'
 	
 	httpsEnabled = true
