@@ -10,7 +10,11 @@
 * Groovy 2.4.4+
 * Gradle 2.10+
 * Google Chrome (For more details see: https://sites.google.com/a/chromium.org/chromedriver/getting-started)
-* Note: If you are using this set of tests in a headless environment (console-based), then please change the driver from ChromeDriver to HtmlUnitDriver in lines 29 and 30 of src/test/resources/GebConfig.groovy.  
+
+* Notes:
+* If you are using this set of tests in a headless environment (console-based), then please change the driver from ChromeDriver to HtmlUnitDriver in lines 29 and 30 of src/test/resources/GebConfig.groovy. 
+* Self-signed certificate with common name (CN) localhost is stored in /etc/jetty/keystore.  Jetty can generate it's own keystore, but that keystore can change each time Jetty is started.   Therefore, this project ships with an SSL keystore already prepared with a valid cert suitable to run the entire test without any additional steps required.  
+* There have been issues running these tests with some versions of Java 8 which are still being investigated.  
 
 # Build
 
