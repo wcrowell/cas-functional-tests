@@ -26,8 +26,8 @@ baseUrl = "$properties.protocol://$properties.host:$properties.port"
 // default driver...
 System.setProperty('webdriver.chrome.driver', "src/test/resources/chromedriver")
 driver = {
-//	new ChromeDriver()
-	new HtmlUnitDriver()
+	new ChromeDriver()
+//	new HtmlUnitDriver()
 }
 
 environments {
