@@ -9,12 +9,14 @@
 * JDK 1.7
 * Groovy 2.4.4+
 * Gradle 2.10+
-* Google Chrome (For more details see: https://sites.google.com/a/chromium.org/chromedriver/getting-started)
+* Optional: Google Chrome (For more details see: https://sites.google.com/a/chromium.org/chromedriver/getting-started).  If you do not use Chrome, then HtmlUnit can be used instead.  See the notes below for running on HtmlUnit.
 
 * Notes:
-* If you are using this set of tests in a headless environment (console-based), then please change the driver from ChromeDriver to HtmlUnitDriver in lines 29 and 30 of src/test/resources/GebConfig.groovy. 
-* Self-signed certificate with common name (CN) localhost is stored in /etc/jetty/keystore.  Jetty can generate it's own keystore, but that keystore can change each time Jetty is started.   Therefore, this project ships with an SSL keystore already prepared with a valid cert suitable to run the entire test without any additional steps required.  
+* If you are using this set of tests in a headless environment (console-based), then please change the headless boolean from false to true so that the HtmlUnitDriver is used instead of the to ChromeDriver. 
+* Self-signed certificate with common name (CN) localhost is stored in /etc/jetty/keystore.  Jetty can generate it's own keystore, but that keystore can change each time Jetty is started.   Therefore, this project ships with an SSL keystore already prepared with a valid cert suitable to run the entire test without any additional steps required.  The self-signed certificate is valid for 10 years until 2026. 
 * There have been issues running these tests with some versions of Java 8 which are still being investigated.  
+* Some of the tests will fail with Firefox as that browser prompts the user with some modal dialog boxes.  This is currently being investigated as well.
+* If you do not trust the chromedriver that is in src/test/resources, then you are welcome to download chromedriver from https://sites.google.com/a/chromium.org/chromedriver/downloads and replace it.
 
 # Build
 
