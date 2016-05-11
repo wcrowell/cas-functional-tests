@@ -1,11 +1,17 @@
 apply plugin: 'groovy'
 apply plugin: 'war'
-apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+apply plugin: 'org.akhikhl.gretty'
+//apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+apply from: 'https://raw.github.com/saladinkzn/gretty/master/pluginScripts/gretty.plugin'
+
 import org.akhikhl.gretty.AppStopTask
 
 farm {
-	webapp "org.jasig.cas:cas-server-webapp:$cas_version", contextPath: '/cas', inplace: true
+	//Works
+	webapp "org.jasig.cas:cas-server-webapp:$cas_version", contextPath: '/cas', inplace: true, classPath: ["${project.projectDir}/etc/jars/cas-server-support-rest-4.2.1.jar"]
+	//webapp "org.jasig.cas:cas-server-webapp:$cas_version", contextPath: '/cas', inplace: true, overlay: "org.jasig.cas:cas-server-support-rest:$cas_version"
 	webapp "org.jasig.cas:cas-management-webapp:$cas_version", contextPath: '/cas-services', inplace: true
+	//webapp ':cas'
 	webapp ':protected-web-app'
 	
 	afterEvaluate {
@@ -20,10 +26,11 @@ buildscript {
 	}
   
 	dependencies {
-		classpath "org.akhikhl.gretty:gretty:$gretty_version"
+		//classpath "org.akhikhl.gretty:gretty:$gretty_version"
+		classpath 'ru.shadam.gretty:gretty:+'
 	}
 }
-  
+
 repositories {
 	jcenter()
 	// enable this to use snapshot versions of Gretty:
@@ -65,8 +72,8 @@ dependencies {
 	testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
 	testCompile "org.seleniumhq.selenium:selenium-ie-driver:$seleniumVersion"
 	testCompile "org.seleniumhq.selenium:selenium-safari-driver:$seleniumVersion"
-	testCompile "org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion"
-	testCompile "org.codehaus.groovy.modules.http-builder:http-builder:$httpClient"
+	testCompile "org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion" 
+	testCompile "org.codehaus.groovy.modules.http-builder:http-builder:$httpClient"	
 }
 
 gretty {
@@ -106,6 +113,4 @@ gretty {
 	httpsEnabled = true
 	httpEnabled = true
 }
-
-apply plugin: 'org.akhikhl.gretty'
 
