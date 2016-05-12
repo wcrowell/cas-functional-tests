@@ -39,6 +39,7 @@ class ValidateSpec extends CommonGebSpec {
 
 		// Validate the service ticket
 		go "/" + properties."cas.context.root" + "/validate?service=$baseUrl/protected-web-app/&ticket=$serviceTicket"
-		assert $("pre").text() == "yes\ncasuser"
+		
+        assert $().text() == "yes\ncasuser"
     }
 }
