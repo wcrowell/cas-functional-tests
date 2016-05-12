@@ -1,9 +1,6 @@
 import pages.LoginPage
 import groovyx.net.http.RESTClient
-import groovyx.net.http.HTTPBuilder
-import groovyx.net.http.HttpURLClient
-import static groovyx.net.http.ContentType.*
-import static groovyx.net.http.Method.*
+import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
 class ValidateSpec extends CommonGebSpec {
 	def setup() {
@@ -39,7 +36,14 @@ class ValidateSpec extends CommonGebSpec {
 
 		// Validate the service ticket
 		go "/" + properties."cas.context.root" + "/validate?service=$baseUrl/protected-web-app/&ticket=$serviceTicket"
-		
-        assert $().text() == "yes\ncasuser"
+
+		println "result: $driver.pageSource"
+
+		// Appears to be a difference the way HtmlUnitDriver behaves from ChromeDriver
+	    if (driver instanceof HtmlUnitDriver) {	
+        		assert driver.pageSource == "yes\ncasuser\n"
+		} else {
+			assert $().text() == "yes\ncasuser"
+		}
     }
 }
