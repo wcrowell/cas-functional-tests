@@ -1,19 +1,12 @@
 apply plugin: 'groovy'
 apply plugin: 'war'
 apply plugin: 'org.akhikhl.gretty'
-//apply plugin: 'ru.shadam.gretty'
-//apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
-//apply from: 'https://raw.github.com/saladinkzn/gretty/master/pluginScripts/gretty.plugin'
 
 import org.akhikhl.gretty.AppStopTask
 
 farm {
-	//Works
-	//webapp "org.jasig.cas:cas-server-webapp:$cas_version", contextPath: '/cas', inplace: true, classPath: ["${project.projectDir}/etc/jars/cas-server-support-rest-4.2.1.jar"]
-	webapp "org.jasig.cas:cas-server-webapp:$cas_version", contextPath: '/cas', inplace: true, dependencies: [ "org.jasig.cas:cas-server-support-rest:4.2.1" ]
-	//webapp "org.jasig.cas:cas-server-webapp:$cas_version", contextPath: '/cas', inplace: true, overlay: "org.jasig.cas:cas-server-support-rest:$cas_version"
+	webapp "org.jasig.cas:cas-server-webapp:$cas_version", contextPath: '/cas', inplace: true, dependencies: [ "org.jasig.cas:cas-server-support-rest:$cas_version" ]
 	webapp "org.jasig.cas:cas-management-webapp:$cas_version", contextPath: '/cas-services', inplace: true
-	//webapp ':cas'
 	webapp ':protected-web-app'
 	
 	afterEvaluate {
@@ -24,13 +17,12 @@ farm {
 buildscript {
 	repositories {
 		jcenter()
+		// enable this to use snapshot versions of Gretty:
 		maven { url 'http://oss.sonatype.org/content/repositories/releases/' }
 		maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
 	}
   
 	dependencies {
-		//classpath "org.akhikhl.gretty:gretty:$gretty_version"
-		//classpath 'ru.shadam.gretty:gretty:+'
 		classpath "ru.shadam.gretty:gretty:$gretty_version"
 	}
 }

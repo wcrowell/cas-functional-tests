@@ -1,14 +1,14 @@
 {
   "@class" : "org.jasig.cas.services.RegexRegisteredService",
-  "serviceId" : "http://localhost:8080/protected-web-app.*",
-  "name" : "CAS Example Protected Web Application",
-  "id" : 52497044623303,
-  "description" : "Services Management Web Application via plain-text",
+  "serviceId" : "https://localhost:8443/protected-web-app.*",
+  "name" : "CAS Example Protected Web Application via TLS",
+  "id" : 52497044623302,
+  "description" : "Services Management Web Application",
   "proxyPolicy" : {
     "@class" : "org.jasig.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
-    "pattern" : "^http?://.*"
+    "pattern" : "^https?://.*"
   },
-  "evaluationOrder" : 2,
+  "evaluationOrder" : 1,
   "usernameAttributeProvider" : {
     "@class" : "org.jasig.cas.services.DefaultRegisteredServiceUsernameProvider"
   },
