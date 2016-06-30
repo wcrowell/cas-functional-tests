@@ -4,6 +4,15 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">         
     <filter>
+        <filter-name>Capture PGT Filter</filter-name>
+        <filter-class>org.jasig.cas.CapturePGTFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Capture PGT Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+	
+    <filter>
         <filter-name>CAS Authentication Filter</filter-name>
         <filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
         <init-param>
