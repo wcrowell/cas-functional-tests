@@ -1,4 +1,4 @@
-package pages
+package org.jasig.cas.test.pages
 
 import geb.Page
 

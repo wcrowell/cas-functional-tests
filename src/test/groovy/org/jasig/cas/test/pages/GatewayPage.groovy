@@ -1,4 +1,4 @@
-package pages;
+package org.jasig.cas.test.pages
 
 class GatewayPage extends LoginPage {
 	static at = {

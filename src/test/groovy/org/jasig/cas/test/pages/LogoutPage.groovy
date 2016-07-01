@@ -1,8 +1,7 @@
-package pages
+package org.jasig.cas.test.pages
 
-import geb.Page;
+import geb.Page
 import geb.Browser;
-import pages.AdminPage;
 
 class LogoutPage extends Page {
 	// url will be overwritten in getPageUrl() below

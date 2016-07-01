@@ -1,6 +1,7 @@
 package org.jasig.cas.test.common
 import geb.spock.GebSpec
-import pages.LoginPage
+
+import org.jasig.cas.test.pages.LoginPage;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver
 import groovyx.net.http.RESTClient
 

@@ -1,7 +1,7 @@
 package org.jasig.cas.test.login
-import pages.LoginPage
-import pages.LoginPageWithService
 import org.jasig.cas.test.common.CommonGebSpec
+import org.jasig.cas.test.pages.LoginPage
+import org.jasig.cas.test.pages.LoginPageWithService;;
 
 class BadLoginSpec extends CommonGebSpec {
 	static invalidCredentials = "Invalid credentials."

@@ -1,9 +1,9 @@
 package org.jasig.cas.test.login
-import pages.AdminPage
-import pages.GatewayPage
-import pages.LoginPageWithService
 import groovyx.net.http.URIBuilder
 import org.jasig.cas.test.common.CommonGebSpec
+import org.jasig.cas.test.pages.AdminPage
+import org.jasig.cas.test.pages.GatewayPage
+import org.jasig.cas.test.pages.LoginPageWithService;;;
 
 class GatewaySpec extends CommonGebSpec {
 	def setup() {
