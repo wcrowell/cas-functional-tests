@@ -1,7 +1,8 @@
-import groovyx.net.http.HTTPBuilder
-import static groovyx.net.http.ContentType.*
+package org.jasig.cas.test.validation
+import groovyx.net.http.*
+import org.jasig.cas.test.common.CommonGebSpec
 
-class PGTInvalidationByLogoutSpec extends CommonGebSpec {
+class ValidateServiceWithPGTSpec extends CommonGebSpec {
 	def setup() {
 		super
 	}
@@ -17,7 +18,7 @@ class PGTInvalidationByLogoutSpec extends CommonGebSpec {
 		// If using SSL, then this method must be called or else a javax.net.ssl.SSLHandshakeException will result due to a self-signed certificate in /etc/jetty/keystore.
 		client.ignoreSSLIssues()
 
-		client.contentType = XML
+		client.contentType = ContentType.XML
 		client.headers = [Accept : 'application/xml']
 		
 		// Validate the service ticket and get the proxy granting ticket IOU
@@ -32,7 +33,7 @@ class PGTInvalidationByLogoutSpec extends CommonGebSpec {
 		
 		// Correlate PGTIOU with PGT
 		def proxyGrantingTicket
-		client.contentType = TEXT
+		client.contentType = ContentType.TEXT
 		client.headers = [Accept : 'text/plain']
 		respSt = client.get( path : "/protected-web-app/proxyUrl",
 			query : [ requestPgtId: "true", pgtIou: "$proxyGrantingTicketIou"])  { resp, xml ->
@@ -42,21 +43,35 @@ class PGTInvalidationByLogoutSpec extends CommonGebSpec {
 
 		println "proxyGrantingTicket: $proxyGrantingTicket"
 
-		// Visit logout
-		respSt = client.get( path : "/" + properties."cas.context.root" + "/logout")  { resp, xml ->
-				assert resp.status == 200
-				println "logout: " + xml.text
-			}
+		client.contentType = ContentType.XML
+		client.headers = [Accept : 'application/xml']
 
-		//client.contentType = XML
-		//client.headers = [Accept : 'application/xml']
-
-		// Ensure the proxy ticket cannot be used after logout
+		// Get the proxy ticket
+		def proxyTicket
 		respSt = client.get( path : "/" + properties."cas.context.root" + "/proxy",
 			query : [ targetService: "$baseUrl/protected-web-app/", pgt: "$proxyGrantingTicket"])  { resp, xml ->
 				assert resp.status == 200
-				println "final: " + xml.text
-				// assert xml.proxyFailure.@code == 'BAD_PGT' 
+				proxyTicket = xml.proxySuccess.proxyTicket
+			}
+		
+		println "proxyTicket: $proxyTicket"
+
+		// Get the proxy granting ticket URL
+		def proxyGrantingTicketUrl
+		respSt = client.get( path : "/" + properties."cas.context.root" + "/proxyValidate",
+			query : [ service: "$baseUrl/protected-web-app/", ticket: "$proxyTicket"])  { resp, xml ->
+				assert resp.status == 200
+				proxyGrantingTicketUrl = xml.authenticationSuccess.proxies.proxy[0]
+			}
+		
+		println "proxyGrantingTicketUrl: $proxyGrantingTicketUrl"
+
+		// Ensure the proxy ticket cannot be used again.
+		respSt = client.get( path : "/" + properties."cas.context.root" + "/proxyValidate",
+			query : [ service: "$baseUrl/protected-web-app/", ticket: "$proxyTicket", reload: "true"])  { resp, xml ->
+				assert resp.status == 200
+				println "Proxy ticket status is now: " + xml.authenticationFailure.@code
+				assert xml.authenticationFailure.@code == 'INVALID_TICKET'
 			}
     }
 }

@@ -16,6 +16,7 @@ farm {
 
 buildscript {
 	repositories {
+		mavenCentral()
 		jcenter()
 		// enable this to use snapshot versions of Gretty:
 		maven { url 'http://oss.sonatype.org/content/repositories/releases/' }
@@ -28,6 +29,7 @@ buildscript {
 }
 
 repositories {
+	mavenCentral()
 	jcenter()
 	// enable this to use snapshot versions of Gretty:
 	maven { url 'http://oss.sonatype.org/content/repositories/releases/' }
@@ -97,8 +99,6 @@ gretty {
 	systemProperty 'tgc.name', 'TGC'
 	systemProperty 'create.sso.renewed.authn', 'true'
 	
-	systemProperty 'user.details.file.location', 'file:./etc/user-details.properties'
-
 	systemProperty 'javax.net.ssl.trustStore', "${project.projectDir}/etc/jetty/keystore"
 	systemProperty 'javax.net.ssl.trustStorePassword', 'changeit'
 

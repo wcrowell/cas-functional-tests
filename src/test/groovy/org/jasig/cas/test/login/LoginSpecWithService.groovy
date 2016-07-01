@@ -1,7 +1,9 @@
+package org.jasig.cas.test.login
 import pages.AdminPage
 import pages.LoginPage
 import pages.LoginPageWithService
 import pages.LogoutPage
+import org.jasig.cas.test.common.CommonGebSpec
 
 class LoginSpecWithService extends CommonGebSpec {
 	def setup() {

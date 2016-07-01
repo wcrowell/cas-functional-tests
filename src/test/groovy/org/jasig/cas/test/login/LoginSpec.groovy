@@ -1,5 +1,6 @@
-import pages.AdminPage
+package org.jasig.cas.test.login
 import pages.LoginPage
+import org.jasig.cas.test.common.CommonGebSpec
 
 class LoginSpec extends CommonGebSpec {
 	static loginSuccessful = "Log In Successful"

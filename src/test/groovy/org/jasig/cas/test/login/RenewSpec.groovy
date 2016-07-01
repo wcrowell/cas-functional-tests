@@ -1,4 +1,7 @@
+package org.jasig.cas.test.login
 import pages.LoginPageWithService
+import org.jasig.cas.test.common.CommonGebSpec
+
 import groovyx.net.http.URIBuilder
 
 class RenewSpec extends CommonGebSpec {

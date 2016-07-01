@@ -1,5 +1,7 @@
+package org.jasig.cas.test.validation
 import groovyx.net.http.HTTPBuilder
 import static groovyx.net.http.ContentType.*
+import org.jasig.cas.test.common.CommonGebSpec
 
 class MultiLevelProxySpec extends CommonGebSpec {
 	def setup() {

@@ -1,5 +1,7 @@
+package org.jasig.cas.test.validation
 import pages.LoginPage
 import org.openqa.selenium.htmlunit.HtmlUnitDriver
+import org.jasig.cas.test.common.CommonGebSpec
 
 class ValidateSpec extends CommonGebSpec {
 	def setup() {

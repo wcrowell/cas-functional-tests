@@ -1,6 +1,7 @@
+package org.jasig.cas.test.login
 import pages.LoginPage
 import pages.LoginPageWithService
-
+import org.jasig.cas.test.common.CommonGebSpec
 
 class BadLoginSpec extends CommonGebSpec {
 	static invalidCredentials = "Invalid credentials."
@@ -10,7 +11,7 @@ class BadLoginSpec extends CommonGebSpec {
 		to LoginPage
 	}
 
-	def "authenticates a bad user"() {
+	def "Incorrect credentials"() {
 		given:
 		at LoginPageWithService
 		

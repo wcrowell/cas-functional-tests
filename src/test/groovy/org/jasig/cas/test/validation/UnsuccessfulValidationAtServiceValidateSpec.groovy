@@ -1,11 +1,13 @@
+package org.jasig.cas.test.validation
 import groovyx.net.http.*
+import org.jasig.cas.test.common.CommonGebSpec
 
-class UnsuccessfulValidationAtValidateSpec extends CommonGebSpec {
+class UnsuccessfulValidationAtServiceValidateSpec extends CommonGebSpec {
 	def setup() {
 		super
 	}
 
-	def "CAS 2.0 unsuccessful validation at /validate"() {
+	def "CAS 2.0 unsuccessful validation at /serviceValidate"() {
 		given:
 
 		// Get a service ticket	using the ticket granting ticket
@@ -54,13 +56,11 @@ class UnsuccessfulValidationAtValidateSpec extends CommonGebSpec {
 		
 		println "proxyTicket: $proxyTicket"
 
-		client.contentType = ContentType.TEXT
-		
-		// Submit the proxy ticket to /validate which should not allow proxy tickets.
-		respSt = client.get( path : "/" + properties."cas.context.root" + "/validate", 
+		// Submit the proxy ticket to /serviceValidate which should not allow proxy tickets.
+		respSt = client.get( path : "/" + properties."cas.context.root" + "/serviceValidate", 
 			query : [ service: "$baseUrl/protected-web-app/", ticket: "$proxyTicket"])  { resp, xml ->
 				assert resp.status == 200
-				assert xml.text.trim() == 'no'
+				assert xml.authenticationFailure.@code == 'INVALID_TICKET'
 			}
 	}
 }

@@ -1,4 +1,6 @@
+package org.jasig.cas.test.validation
 import groovyx.net.http.*
+import org.jasig.cas.test.common.CommonGebSpec
 
 class ValidateFailureSpec extends CommonGebSpec {
 	def setup() {

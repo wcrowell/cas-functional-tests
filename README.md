@@ -1,3 +1,5 @@
+# Recent change take note: Scripts were moved to org.jasig.cas.test packages in this project instead of using default package.
+
 # To run: gradle clean farmIntegrationTest
 
 # CAS Function Tests
