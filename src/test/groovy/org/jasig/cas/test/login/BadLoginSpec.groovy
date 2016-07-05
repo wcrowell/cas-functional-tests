@@ -16,6 +16,7 @@ class BadLoginSpec extends CommonGebSpec {
 		at LoginPageWithService
 		
 		when: "login using provided credentials"
+		
 		loginAs(properties.username, properties."bad.password")
 		assert $("div", id: "msg").text() == invalidCredentials
 		assert driver.manage().getCookies().contains(properties."cookie.name") == false

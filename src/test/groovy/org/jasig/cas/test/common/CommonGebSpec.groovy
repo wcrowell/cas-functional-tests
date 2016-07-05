@@ -1,18 +1,21 @@
 package org.jasig.cas.test.common
-import geb.spock.GebSpec
 
-import org.jasig.cas.test.pages.LoginPage;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver
-import groovyx.net.http.RESTClient
+import geb.spock.GebSpec
+import groovyx.net.http.*
 
 class CommonGebSpec extends GebSpec {
 	static def cachedDriver // static variable will store our single driver instance
 	static def contextRoot
 	def properties = browser.config.rawConfig.properties
+	def client = new HTTPBuilder(browser.config.baseUrl)
+	def ticketGrantingTicket
 	
 	def setup() {
 		contextRoot = properties."cas.context.root"
 		driver = cachedDriver   // each test should use our cached browser instance
+		
+		// If using SSL, then this method must be called or else a javax.net.ssl.SSLHandshakeException will result due to a self-signed certificate in /etc/jetty/keystore.
+		client.ignoreSSLIssues()
 	}
 
 	// Browser is being reused, thus, logout from the application after
@@ -39,39 +42,54 @@ class CommonGebSpec extends GebSpec {
 	}
 
 	def String getServiceTicket(String service) {
-		def client = new RESTClient(browser.config.baseUrl)
-		// If using SSL, then this method must be called or else a javax.net.ssl.SSLHandshakeException will result due to a self-signed certificate in /etc/jetty/keystore.
-		client.ignoreSSLIssues()
-
 		// Get a ticket granting ticket
-		def ticket = getTicketGrantingTicket(client);
+		def ticket = getTicketGrantingTicket();
 
+		client.contentType = ContentType.TEXT
+		client.headers = [Accept : 'text/plain']
+
+		def serviceTicket
 		// Get a service ticket	using the ticket granting ticket
-		def respSt = client.post( path : "/" + properties."cas.context.root" + "/v1/tickets/$ticket",
+		def respSt = client.post( path : "/" + properties."cas.context.root" + "/v1/tickets/$ticketGrantingTicket",
 			body : [ service: "$baseUrl/$service/" ],
-			requestContentType : "application/x-www-form-urlencoded" )
-
-		assert respSt.status == 200
-		def serviceTicket = respSt.data.text
+			requestContentType : "application/x-www-form-urlencoded" ) { resp, xml ->
+				assert resp.status == 200
+				serviceTicket = xml.text
+			}
 
 		println "serviceTicket: $serviceTicket"
 		
 		return serviceTicket
 	}	
 	
-	def String getTicketGrantingTicket(RESTClient client) {
+	def getTicketGrantingTicket() {
+		client.contentType = ContentType.TEXT
+		client.headers = [Accept : 'text/plain']
+		
 		// Get a ticket granting ticket
 		def respTgt = client.post( path : "/" + properties."cas.context.root" + "/v1/tickets",
 			body : [ username: properties.username, password: properties.password ],
-			requestContentType : "application/x-www-form-urlencoded" )
+			requestContentType : "application/x-www-form-urlencoded" ) { resp, xml ->
+				assert resp.status == 201
+				def url = resp.headers.Location
+				def String[] nodes = url.split("/")
+				ticketGrantingTicket = nodes.getAt(nodes.length - 1)
+			}
 
-		assert respTgt.status == 201
-		def url = respTgt.headers.Location
-		def String[] nodes = url.split("/")
-		def ticket = nodes.getAt(nodes.length - 1)
+		println "ticketGrantingTicket: $ticketGrantingTicket"
+	}
+	
+	def deleteTicketGrantingTicket() {
+		def restClient = new RESTClient(browser.config.baseUrl)
+		// If using SSL, then this method must be called or else a javax.net.ssl.SSLHandshakeException will result due to a self-signed certificate in /etc/jetty/keystore.
+		restClient.ignoreSSLIssues()
 		
-		println "ticket: $ticket"
+		restClient.contentType = ContentType.TEXT
+		restClient.headers = [Accept : 'text/plain']
 		
-		return ticket
+		// Delete a ticket granting ticket
+		def resp = restClient.delete( path : "/" + properties."cas.context.root" + "/v1/tickets/$ticketGrantingTicket")
+		assert resp.status == 200
+		println "Ticket Granting Ticket ID ${resp.data} was deleted."
 	}
 }

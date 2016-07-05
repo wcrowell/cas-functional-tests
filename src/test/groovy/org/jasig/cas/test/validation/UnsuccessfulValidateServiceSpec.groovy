@@ -1,5 +1,6 @@
 package org.jasig.cas.test.validation
-import groovyx.net.http.*
+
+import static groovyx.net.http.ContentType.*
 import org.jasig.cas.test.common.CommonGebSpec
 
 class UnsuccessfulValidateServiceSpec extends CommonGebSpec {
@@ -12,12 +13,7 @@ class UnsuccessfulValidateServiceSpec extends CommonGebSpec {
 	def "CAS 2.0 unsuccessful validation (bad ticket, wrong service)"() {
 		given:
 
-		def client = new HTTPBuilder(browser.config.baseUrl)
-		
-		// If using SSL, then this method must be called or else a javax.net.ssl.SSLHandshakeException will result due to a self-signed certificate in /etc/jetty/keystore.
-		client.ignoreSSLIssues()
-		
-		client.contentType = ContentType.XML
+		client.contentType = XML
 		client.headers = [Accept : 'application/xml']
 				
 		// Try to validate a bad service ticket
@@ -29,7 +25,10 @@ class UnsuccessfulValidateServiceSpec extends CommonGebSpec {
 
 		// Use valid service ticket to get access to a service that does not match what the ticket was issued for.
 		def serviceTicket = getServiceTicket('protected-web-app')
-		
+
+		client.contentType = XML
+		client.headers = [Accept : 'application/xml']
+
 		response = client.get( path : "/" + properties."cas.context.root" + "/serviceValidate",
 			query : [ service: "$baseUrl/cas-services/", ticket: "$serviceTicket"]) { resp, xml ->
 				assert resp.status == 200

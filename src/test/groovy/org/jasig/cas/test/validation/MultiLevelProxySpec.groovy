@@ -1,5 +1,5 @@
 package org.jasig.cas.test.validation
-import groovyx.net.http.HTTPBuilder
+
 import static groovyx.net.http.ContentType.*
 import org.jasig.cas.test.common.CommonGebSpec
 
@@ -13,11 +13,6 @@ class MultiLevelProxySpec extends CommonGebSpec {
 
 		// Get a service ticket	using the ticket granting ticket
 		def serviceTicket = getServiceTicket("protected-web-app")
-
-		def client = new HTTPBuilder(browser.config.baseUrl)
-
-		// If using SSL, then this method must be called or else a javax.net.ssl.SSLHandshakeException will result due to a self-signed certificate in /etc/jetty/keystore.
-		client.ignoreSSLIssues()
 
 		client.contentType = XML
 		client.headers = [Accept : 'application/xml']

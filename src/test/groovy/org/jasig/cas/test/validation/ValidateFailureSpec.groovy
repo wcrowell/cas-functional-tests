@@ -1,5 +1,6 @@
 package org.jasig.cas.test.validation
-import groovyx.net.http.*
+
+import static groovyx.net.http.ContentType.*
 import org.jasig.cas.test.common.CommonGebSpec
 
 class ValidateFailureSpec extends CommonGebSpec {
@@ -10,12 +11,7 @@ class ValidateFailureSpec extends CommonGebSpec {
 	def "CAS 1.0 validation failure (bad ticket, wrong service)"() {
 		given:
 
-		def client = new HTTPBuilder(browser.config.baseUrl)
-
-		// If using SSL, then this method must be called or else a javax.net.ssl.SSLHandshakeException will result due to a self-signed certificate in /etc/jetty/keystore.
-		client.ignoreSSLIssues()
-
-		client.contentType = ContentType.TEXT
+		client.contentType = TEXT
 		client.headers = [Accept : 'application/xml']
 		
 		// Validate a non-existing service and bad service ticket
