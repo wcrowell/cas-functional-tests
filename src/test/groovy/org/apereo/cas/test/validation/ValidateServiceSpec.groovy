@@ -1,7 +1,8 @@
-package org.jasig.cas.test.validation
+package org.apereo.cas.test.validation
 
 import static groovyx.net.http.ContentType.*
-import org.jasig.cas.test.common.CommonGebSpec
+
+import org.apereo.cas.test.common.CommonGebSpec;
 
 class ValidateServiceSpec extends CommonGebSpec {
 	def setup() {

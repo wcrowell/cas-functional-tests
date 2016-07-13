@@ -1,4 +1,4 @@
-package org.jasig.cas.test.pages
+package org.apereo.cas.test.pages
 
 class GatewayPage extends LoginPage {
 	static at = {

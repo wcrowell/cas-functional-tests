@@ -1,14 +1,15 @@
-package org.jasig.cas.test.validation
+package org.apereo.cas.test.validation
 
 import static groovyx.net.http.ContentType.*
-import org.jasig.cas.test.common.CommonGebSpec
 
-class UnsuccessfulValidationAtValidateSpec extends CommonGebSpec {
+import org.apereo.cas.test.common.CommonGebSpec;
+
+class PGTInvalidationByLogoutSpec extends CommonGebSpec {
 	def setup() {
 		super
 	}
 
-	def "CAS 2.0 unsuccessful validation at /validate"() {
+	def "CAS 2.0 validation, acquire proxy-granting ticket, proxy authentication"() {
 		given:
 
 		// Get a service ticket	using the ticket granting ticket
@@ -16,8 +17,8 @@ class UnsuccessfulValidationAtValidateSpec extends CommonGebSpec {
 
 		client.contentType = XML
 		client.headers = [Accept : 'application/xml']
-		
-		// Validate the service ticket and get the proxy granting ticket IOU
+
+ 		// Validate the service ticket and get the proxy granting ticket IOU
 		def proxyGrantingTicketIou
 		def respSt = client.get( path : "/" + properties."cas.context.root" + "/serviceValidate", 
 			query : [ service: "$baseUrl/protected-web-app/", ticket: "$serviceTicket", pgtUrl: "$baseUrl/protected-web-app/proxyUrl"])  { resp, xml ->
@@ -39,26 +40,15 @@ class UnsuccessfulValidationAtValidateSpec extends CommonGebSpec {
 
 		println "proxyGrantingTicket: $proxyGrantingTicket"
 
-		client.contentType = XML
-		client.headers = [Accept : 'application/xml']
+		// Visit logout
+		deleteTicketGrantingTicket()
 
-		// Get the proxy ticket
-		def proxyTicket
+		// Ensure the proxy ticket cannot be used after logout
 		respSt = client.get( path : "/" + properties."cas.context.root" + "/proxy",
 			query : [ targetService: "$baseUrl/protected-web-app/", pgt: "$proxyGrantingTicket"])  { resp, xml ->
 				assert resp.status == 200
-				proxyTicket = xml.proxySuccess.proxyTicket
+				println "final: " + xml.text
+				// assert xml.proxyFailure.@code == 'BAD_PGT' 
 			}
-		
-		println "proxyTicket: $proxyTicket"
-
-		client.contentType = TEXT
-		
-		// Submit the proxy ticket to /validate which should not allow proxy tickets.
-		respSt = client.get( path : "/" + properties."cas.context.root" + "/validate", 
-			query : [ service: "$baseUrl/protected-web-app/", ticket: "$proxyTicket"])  { resp, xml ->
-				assert resp.status == 200
-				assert xml.text.trim() == 'no'
-			}
-	}
+    }
 }

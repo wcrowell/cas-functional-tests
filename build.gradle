@@ -5,8 +5,8 @@ apply plugin: 'org.akhikhl.gretty'
 import org.akhikhl.gretty.AppStopTask
 
 farm {
-	webapp "org.jasig.cas:cas-server-webapp:$cas_version", contextPath: '/cas', inplace: true, dependencies: [ "org.jasig.cas:cas-server-support-rest:$cas_version" ]
-	webapp "org.jasig.cas:cas-management-webapp:$cas_version", contextPath: '/cas-services', inplace: true
+	webapp "org.apereo.cas:cas-server-webapp:$cas_version", contextPath: '/cas', inplace: true, dependencies: [ "org.apereo.cas:cas-server-support-rest:$cas_version" ]
+	webapp "org.apereo.cas:cas-management-webapp:$cas_version", contextPath: '/cas-services', inplace: true
 	webapp ':protected-web-app'
 	
 	afterEvaluate {
@@ -20,6 +20,8 @@ buildscript {
 		jcenter()
 		// enable this to use snapshot versions of Gretty:
 		maven { url 'http://oss.sonatype.org/content/repositories/releases/' }
+		maven { url 'http://oss.sonatype.org/content/repositories/snapshots/' }
+		maven { url 'https://oss.sonatype.org/content/repositories/snapshots/org/apereo/cas/' }
 		maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
 	}
   
@@ -33,16 +35,20 @@ repositories {
 	jcenter()
 	// enable this to use snapshot versions of Gretty:
 	maven { url 'http://oss.sonatype.org/content/repositories/releases/' }
+	maven { url 'http://oss.sonatype.org/content/repositories/snapshots/' }
+	maven { url 'https://oss.sonatype.org/content/repositories/snapshots/org/apereo/cas/' }
 	maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
 }
 
 test {
 	include '**/*Spec*.*'
+	//include '**/*PGTInvalidationByLogoutSpec*.*'
 }
 
 task integrationTest(type: Test, dependsOn: 'test') {
 	outputs.upToDateWhen { false }
 	include '**/*Spec*.*'
+	//include '**/*PGTInvalidationByLogoutSpec*.*'
 	// specific to concrete test harness
 	doFirst {
 		systemProperty 'geb.build.reportsDir', reporting.file('geb')
@@ -78,16 +84,59 @@ dependencies {
 gretty {
 	systemProperty 'service.registry.config.location', './etc/services'
 	systemProperty 'server.name', 'https://localhost:8443'
-	systemProperty 'cas.host', 'https://localhost:8443'
-	//systemProperty 'server.name', 'http://localhost:8080'
-	//systemProperty 'cas.host', 'http://localhost:8080'
 	systemProperty 'server.prefix', '${server.name}/cas'
-	systemProperty 'cas.prefix', '${cas.host}/cas'
+	systemProperty 'cas.prefix', 'https://localhost:8443/cas'
 	systemProperty 'cas.securityContext.casProcessingFilterEntryPoint.loginUrl', '${cas.prefix}/login'
 	systemProperty 'cas.securityContext.ticketValidator.casServerUrlPrefix', '${cas.prefix}'
 	systemProperty 'cas-management.host', 'https://localhost:8443'
-	//systemProperty 'cas-management.host', 'http://localhost:8080'
-	systemProperty 'cas-management.prefix', '${cas.host}/cas-services'
+
+	// Start CAS 5 Properties
+	
+	systemProperty 'cas.mgmt.serverName', 'https://localhost:8443'
+	systemProperty 'cas.server.name', 'https://localhost:8443'
+	systemProperty 'cas.server.prefix', 'https://localhost:8443/cas'
+	systemProperty 'cas.authn.accept.users', 'casuser::Mellon,scott::password,bob::password2'
+	systemProperty 'cas.authn.file.passwordEncoder.type', 'NONE'
+	
+	systemProperty 'spring.http.encoding.charset', 'UTF-8'
+	systemProperty 'spring.http.encoding.enabled', 'true'
+	systemProperty 'spring.http.encoding.force', 'true'
+	
+	systemProperty 'spring.cloud.bus.enabled', 'false'
+	systemProperty 'spring.cloud.bus.refresh.enabled', 'true'
+	systemProperty 'spring.cloud.bus.env.enabled', 'true'
+	systemProperty 'spring.cloud.bus.destination', 'CasCloudBus'
+	systemProperty 'spring.cloud.bus.ack.enabled', 'true'
+	
+	systemProperty 'cas.securityContext.adminpages.ip', '127.0.0.1'
+	systemProperty 'endpoints.enabled', 'true'
+	systemProperty 'endpoints.sensitive', 'true'
+	systemProperty 'management.context-path', '/status'
+	systemProperty 'endpoints.restart.enabled', 'false'
+	systemProperty 'endpoints.shutdown.enabled', 'false'
+	
+	systemProperty 'server.session.timeout', '300'
+	systemProperty 'server.session.cookie.http-only', 'true'
+	systemProperty 'server.session.tracking-modes', 'COOKIE'
+	
+	systemProperty 'spring.thymeleaf.encoding', 'UTF-8'
+	systemProperty 'spring.thymeleaf.cache', 'false'
+	
+	systemProperty 'server.context-parameters.isLog4jAutoInitializationDisabled', 'true'
+	
+	systemProperty 'spring.aop.auto', 'true'
+	systemProperty 'spring.aop.proxy-target-class', 'true'
+	
+	systemProperty 'cas.authn.attributes.uid', 'uid'
+	systemProperty 'cas.authn.attributes.displayName', 'displayName'
+	systemProperty 'cas.authn.attributes.cn', 'commonName'
+	systemProperty 'cas.authn.attributes.affiliation', 'groupMembership'
+	
+	systemProperty 'cas.serviceRegistry.config.location', './etc/services'
+	
+	// End CAS 5 Properties
+	
+	systemProperty 'cas-management.prefix', 'https://localhost:8443/cas-services'
 	systemProperty 'cas-management.securityContext.serviceProperties.service', '${cas-management.prefix}/callback'
 	systemProperty 'cas-management.securityContext.serviceProperties.adminRoles', 'ROLE_ADMIN'
 	systemProperty 'pac4j.callback.defaultUrl', '/manage.html'

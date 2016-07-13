@@ -1,8 +1,8 @@
-package org.jasig.cas.test.common
+package org.apereo.cas.test.common
 import org.junit.runner.RunWith
 import org.junit.runners.Suite
-import org.jasig.cas.test.login.*
-import org.jasig.cas.test.validation.*
+import org.apereo.cas.test.login.*
+import org.apereo.cas.test.validation.*
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses([

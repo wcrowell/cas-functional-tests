@@ -1,7 +1,7 @@
-package org.jasig.cas.test.login
-import org.jasig.cas.test.common.CommonGebSpec
-import org.jasig.cas.test.pages.LoginPage
-import org.jasig.cas.test.pages.LoginPageWithService;;
+package org.apereo.cas.test.login
+import org.apereo.cas.test.common.CommonGebSpec
+import org.apereo.cas.test.pages.LoginPage;
+import org.apereo.cas.test.pages.LoginPageWithService;;;
 
 class BadLoginSpec extends CommonGebSpec {
 	static invalidCredentials = "Invalid credentials."
@@ -14,7 +14,7 @@ class BadLoginSpec extends CommonGebSpec {
 	def "Incorrect credentials"() {
 		given:
 		at LoginPageWithService
-		
+
 		when: "login using provided credentials"
 		
 		loginAs(properties.username, properties."bad.password")

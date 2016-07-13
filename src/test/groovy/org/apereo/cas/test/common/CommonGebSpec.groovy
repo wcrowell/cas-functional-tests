@@ -1,4 +1,4 @@
-package org.jasig.cas.test.common
+package org.apereo.cas.test.common
 
 import geb.spock.GebSpec
 import groovyx.net.http.*
@@ -79,7 +79,7 @@ class CommonGebSpec extends GebSpec {
 		println "ticketGrantingTicket: $ticketGrantingTicket"
 	}
 	
-	def deleteTicketGrantingTicket() {
+	def deleteTicketGrantingTicket(String ticket) {
 		def restClient = new RESTClient(browser.config.baseUrl)
 		// If using SSL, then this method must be called or else a javax.net.ssl.SSLHandshakeException will result due to a self-signed certificate in /etc/jetty/keystore.
 		restClient.ignoreSSLIssues()
@@ -88,8 +88,14 @@ class CommonGebSpec extends GebSpec {
 		restClient.headers = [Accept : 'text/plain']
 		
 		// Delete a ticket granting ticket
-		def resp = restClient.delete( path : "/" + properties."cas.context.root" + "/v1/tickets/$ticketGrantingTicket")
-		assert resp.status == 200
-		println "Ticket Granting Ticket ID ${resp.data} was deleted."
+		if (ticket != null && ticket != '') {
+			def resp = restClient.delete( path : "/" + properties."cas.context.root" + "/v1/tickets/$ticket")
+			assert resp.status == 200
+			println "Ticket ID ${resp.data} was deleted."
+		} else {
+			def resp = restClient.delete( path : "/" + properties."cas.context.root" + "/v1/tickets/$ticketGrantingTicket")
+			assert resp.status == 200
+			println "Ticket Granting Ticket ID ${resp.data} was deleted."
+		}
 	}
 }

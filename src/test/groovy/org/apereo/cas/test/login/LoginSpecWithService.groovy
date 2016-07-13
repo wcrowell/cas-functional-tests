@@ -1,9 +1,9 @@
-package org.jasig.cas.test.login
-import org.jasig.cas.test.common.CommonGebSpec
-import org.jasig.cas.test.pages.AdminPage
-import org.jasig.cas.test.pages.LoginPage
-import org.jasig.cas.test.pages.LoginPageWithService
-import org.jasig.cas.test.pages.LogoutPage;;;;
+package org.apereo.cas.test.login
+import org.apereo.cas.test.common.CommonGebSpec
+import org.apereo.cas.test.pages.AdminPage;
+import org.apereo.cas.test.pages.LoginPage;
+import org.apereo.cas.test.pages.LoginPageWithService;
+import org.apereo.cas.test.pages.LogoutPage;;;;;
 
 class LoginSpecWithService extends CommonGebSpec {
 	def setup() {

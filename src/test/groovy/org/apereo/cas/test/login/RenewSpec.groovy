@@ -1,6 +1,6 @@
-package org.jasig.cas.test.login
-import org.jasig.cas.test.common.CommonGebSpec
-import org.jasig.cas.test.pages.LoginPageWithService;
+package org.apereo.cas.test.login
+import org.apereo.cas.test.common.CommonGebSpec
+import org.apereo.cas.test.pages.LoginPageWithService;
 
 import groovyx.net.http.URIBuilder
 

@@ -5,7 +5,7 @@
          version="3.0">         
     <filter>
         <filter-name>Capture PGT Filter</filter-name>
-        <filter-class>org.jasig.cas.CapturePGTFilter</filter-class>
+        <filter-class>org.apereo.cas.filter.CapturePGTFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>Capture PGT Filter</filter-name>

@@ -1,23 +1,23 @@
 {
-  "@class" : "org.jasig.cas.services.RegexRegisteredService",
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
   "serviceId" : "https://localhost:8443/protected-web-app.*",
   "name" : "CAS Example Protected Web Application via TLS",
   "id" : 52497044623302,
   "description" : "Services Management Web Application",
   "proxyPolicy" : {
-    "@class" : "org.jasig.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
+    "@class" : "org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
     "pattern" : "^https?://.*"
   },
   "evaluationOrder" : 1,
   "usernameAttributeProvider" : {
-    "@class" : "org.jasig.cas.services.DefaultRegisteredServiceUsernameProvider"
+    "@class" : "org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider"
   },
   "logoutType" : "BACK_CHANNEL",
   "attributeReleasePolicy" : {
-    "@class" : "org.jasig.cas.services.ReturnAllAttributeReleasePolicy"
+    "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
   },
   "accessStrategy" : {
-    "@class" : "org.jasig.cas.services.DefaultRegisteredServiceAccessStrategy",
+    "@class" : "org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy",
     "enabled" : true,
     "ssoEnabled" : true
   }

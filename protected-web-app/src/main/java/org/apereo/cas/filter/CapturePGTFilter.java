@@ -1,4 +1,4 @@
-package org.jasig.cas;
+package org.apereo.cas.filter;
 
 import java.io.IOException;
 import java.util.HashMap;

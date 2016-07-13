@@ -1,9 +1,10 @@
-package org.jasig.cas.test.validation
+package org.apereo.cas.test.validation
 
 import static groovyx.net.http.ContentType.*
-import org.jasig.cas.test.common.CommonGebSpec
 
-class PGTInvalidationByLogoutSpec extends CommonGebSpec {
+import org.apereo.cas.test.common.CommonGebSpec;
+
+class ValidateServiceWithPGTSpec extends CommonGebSpec {
 	def setup() {
 		super
 	}
@@ -16,8 +17,8 @@ class PGTInvalidationByLogoutSpec extends CommonGebSpec {
 
 		client.contentType = XML
 		client.headers = [Accept : 'application/xml']
-
- 		// Validate the service ticket and get the proxy granting ticket IOU
+		
+		// Validate the service ticket and get the proxy granting ticket IOU
 		def proxyGrantingTicketIou
 		def respSt = client.get( path : "/" + properties."cas.context.root" + "/serviceValidate", 
 			query : [ service: "$baseUrl/protected-web-app/", ticket: "$serviceTicket", pgtUrl: "$baseUrl/protected-web-app/proxyUrl"])  { resp, xml ->
@@ -39,15 +40,35 @@ class PGTInvalidationByLogoutSpec extends CommonGebSpec {
 
 		println "proxyGrantingTicket: $proxyGrantingTicket"
 
-		// Visit logout
-		deleteTicketGrantingTicket()
+		client.contentType = XML
+		client.headers = [Accept : 'application/xml']
 
-		// Ensure the proxy ticket cannot be used after logout
+		// Get the proxy ticket
+		def proxyTicket
 		respSt = client.get( path : "/" + properties."cas.context.root" + "/proxy",
 			query : [ targetService: "$baseUrl/protected-web-app/", pgt: "$proxyGrantingTicket"])  { resp, xml ->
 				assert resp.status == 200
-				println "final: " + xml.text
-				// assert xml.proxyFailure.@code == 'BAD_PGT' 
+				proxyTicket = xml.proxySuccess.proxyTicket
+			}
+		
+		println "proxyTicket: $proxyTicket"
+
+		// Get the proxy granting ticket URL
+		def proxyGrantingTicketUrl
+		respSt = client.get( path : "/" + properties."cas.context.root" + "/proxyValidate",
+			query : [ service: "$baseUrl/protected-web-app/", ticket: "$proxyTicket"])  { resp, xml ->
+				assert resp.status == 200
+				proxyGrantingTicketUrl = xml.authenticationSuccess.proxies.proxy[0]
+			}
+		
+		println "proxyGrantingTicketUrl: $proxyGrantingTicketUrl"
+
+		// Ensure the proxy ticket cannot be used again.
+		respSt = client.get( path : "/" + properties."cas.context.root" + "/proxyValidate",
+			query : [ service: "$baseUrl/protected-web-app/", ticket: "$proxyTicket", reload: "true"])  { resp, xml ->
+				assert resp.status == 200
+				println "Proxy ticket status is now: " + xml.authenticationFailure.@code
+				assert xml.authenticationFailure.@code == 'INVALID_TICKET'
 			}
     }
 }

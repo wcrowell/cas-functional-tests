@@ -1,4 +1,4 @@
-package org.jasig.cas.test.pages
+package org.apereo.cas.test.pages
 
 import geb.Page
 
