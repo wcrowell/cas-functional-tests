@@ -1,8 +1,8 @@
-There are 3 branches:
+## There are 3 branches:
 
-1. master: Runs an embedded Jetty container and deploys cas-server-webapp and cas-management-webapp.  Then runs tests against CAS.
-2. 4.2.x_without_embedded_container: Runs tests against CAS 4.2.x without firing up an embedded container.
-3. 5.0.x: Runs tests against CAS 5.0.x without starting up an embedded container.  
+1. **master**: Runs an embedded Jetty container and deploys cas-server-webapp and cas-management-webapp.  Then runs tests against CAS.
+2. **4.2.x_without_embedded_container**: Runs tests against CAS 4.2.x without firing up an embedded container.
+3. **5.0.x**: Runs tests against CAS 5.0.x without starting up an embedded container.  
 
 * You must setup an embedded container with cas-server-webapp, cas-management-webapp, and protected-web-app for branches 4.2.x_without_embedded_container and 5.0.x.
 
@@ -14,9 +14,9 @@ To run:
 
 Eventually, master will be moved to a branch called 4.2.x_embedded_container and the 5.0.x branch will be moved to master.
 
-## CAS Function Tests
+## CAS Functional Tests
 
-Description: CAS function tests for validating the cas-server-webapp and cas-management-webapp artifacts to exercise the latest versions of CAS.  
+Purpose of tests: CAS function tests for validating the cas-server-webapp and cas-management-webapp artifacts to exercise the latest versions of CAS.  
 
 ### Requirements
 * JDK 1.7
