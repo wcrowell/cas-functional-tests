@@ -1,15 +1,15 @@
 # There are 3 branches:
 
-1) master: Runs an embedded Jetty container and deploys cas-server-webapp and cas-management-webapp.  Then runs tests against CAS.
-2) *4.2.x_without_embedded_container: Runs tests against CAS 4.2.x without firing up an embedded container.
-3) *5.0.x: Runs tests against CAS 5.0.x without starting up an embedded container.  
+# 1) master: Runs an embedded Jetty container and deploys cas-server-webapp and cas-management-webapp.  Then runs tests against CAS.
+# 2) *4.2.x_without_embedded_container: Runs tests against CAS 4.2.x without firing up an embedded container.
+# 3) *5.0.x: Runs tests against CAS 5.0.x without starting up an embedded container.  
 
-* - You must setup an embedded container with cas-server-webapp, cas-management-webapp, and protected-web-app.
+* You must setup an embedded container with cas-server-webapp, cas-management-webapp, and protected-web-app.
 
 # To run: 
-master: gradle clean farmIntegrationTest
-4.2.x_without_embedded_container: gradle clean test
-5.0.x: gradle clena test
+# master: gradle clean farmIntegrationTest
+# 4.2.x_without_embedded_container: gradle clean test
+# 5.0.x: gradle clean test
 
 Eventually, master will be moved to a branch called 4.2.x_embedded_container and the 5.0.x branch will be moved to master.
 
