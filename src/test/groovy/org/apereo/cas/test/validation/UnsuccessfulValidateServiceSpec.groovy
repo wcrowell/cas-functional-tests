@@ -21,7 +21,7 @@ class UnsuccessfulValidateServiceSpec extends CommonGebSpec {
 		def response = client.get( path : "/" + properties."cas.context.root" + "/serviceValidate",
 			query : [ service: "$FOO", ticket: "$FOO"]) { resp, xml ->
 				assert resp.status == 200
-				assert xml.authenticationFailure.@code == "ServiceManagement: Unauthorized Service Access. Service [$FOO] is not found in service registry."
+				assert xml.authenticationFailure.@code == "INVALID_TICKET"
 			}
 
 		// Use valid service ticket to get access to a service that does not match what the ticket was issued for.

@@ -25,7 +25,7 @@ class MultiLevelProxySpec extends CommonGebSpec {
 				assert resp.status == 200
 				proxyGrantingTicketIou = xml.authenticationSuccess.proxyGrantingTicket
 			}
-			
+		
 		println "proxyGrantingTicketIou: $proxyGrantingTicketIou"
 		
 		// Correlate PGTIOU with PGT
@@ -39,7 +39,7 @@ class MultiLevelProxySpec extends CommonGebSpec {
 			}
 
 		println "proxyGrantingTicket: $proxyGrantingTicket"
-
+		
 		client.contentType = XML
 		client.headers = [Accept : 'application/xml']
 
@@ -52,12 +52,13 @@ class MultiLevelProxySpec extends CommonGebSpec {
 			}
 		
 		println "proxyTicket: $proxyTicket"
-
+		
 		// Validate the service ticket and get the proxy granting ticket IOU
 		def proxyGrantingTicketIou2
 		def proxyGrantingTicketUrl2
 		respSt = client.get( path : "/" + properties."cas.context.root" + "/proxyValidate",
 			query : [ service: "$baseUrl/protected-web-app/", ticket: "$proxyTicket", pgtUrl: "$baseUrl/protected-web-app/proxyUrl"])  { resp, xml ->
+				println "Status: " + xml
 				assert resp.status == 200
 				proxyGrantingTicketIou2 = xml.authenticationSuccess.proxyGrantingTicket
 				proxyGrantingTicketUrl2 = xml.authenticationSuccess.proxies.proxy[0]

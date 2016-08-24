@@ -1,6 +1,7 @@
 package org.apereo.cas.test.login
 import org.apereo.cas.test.common.CommonGebSpec
-import org.apereo.cas.test.pages.LoginPage;;
+import org.apereo.cas.test.pages.LoginPage;
+import org.apereo.cas.test.pages.LoginPageSuccessful;
 
 class LoginSpec extends CommonGebSpec {
 	static loginSuccessful = "Log In Successful"
@@ -21,10 +22,10 @@ class LoginSpec extends CommonGebSpec {
 		verifyCookie("TGC")
 
         then: "Verify confirmation page is displayed"
-        at LoginPage
-		assert $("div", id: "msg").$("h2").text() == loginSuccessful
+        at LoginPageSuccessful
+		assert $("div", class: "alert-success").$("h2").text() == loginSuccessful
 
-		to LoginPage
-		assert $("div", id: "msg").$("h2").text() == loginSuccessful
+		to LoginPageSuccessful
+		assert $("div", class: "alert-success").$("h2").text() == loginSuccessful
     }
 }
