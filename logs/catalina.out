@@ -1,0 +1,540 @@
+22-Aug-2016 16:06:02.965 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.32
+22-Aug-2016 16:06:02.966 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 2 2016 19:34:53 UTC
+22-Aug-2016 16:06:02.966 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.32.0
+22-Aug-2016 16:06:02.966 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+22-Aug-2016 16:06:02.966 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.11.5
+22-Aug-2016 16:06:02.966 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+22-Aug-2016 16:06:02.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre
+22-Aug-2016 16:06:02.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_60-b27
+22-Aug-2016 16:06:02.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+22-Aug-2016 16:06:02.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Aug-2016 16:06:02.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djavax.net.ssl.keyStore=/etc/cas/jetty/keystore
+22-Aug-2016 16:06:02.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djavax.net.ssl.keyStorePassword=changeit
+22-Aug-2016 16:06:02.967 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djavax.net.ssl.trustStore=/etc/cas/jetty/keystore
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djavax.net.ssl.trustStorePassword=changeit
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dspring.cloud.bus.enabled=false
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dserver.name=https://localhost:8443
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dserver.prefix=https://localhost:8443/cas
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcas.prefix=https://localhost:8443/cas
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcas.securityContext.casProcessingFilterEntryPoint.loginUrl=https://localhost:8443/cas/login
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcas.securityContext.ticketValidator.casServerUrlPrefix=https://localhost:8443/cas
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcas-management.host=https://localhost:8443
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcas-management.prefix=https://localhost:8443/cas-services
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcas-management.securityContext.serviceProperties.service=https://localhost:8443/cas-services/callback
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcas-management.securityContext.serviceProperties.adminRoles=ROLE_ADMIN
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dpac4j.callback.defaultUrl=/manage.html
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dservice.registry.config.location=/etc/cas/services
+22-Aug-2016 16:06:02.968 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcas-management.properties.config.location=file:/etc/cas/cas-management.properties
+22-Aug-2016 16:06:02.969 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Duser.details.file.location=file:/etc/cas/user-details.properties
+22-Aug-2016 16:06:03.066 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+22-Aug-2016 16:06:03.084 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+22-Aug-2016 16:06:03.086 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8443"]
+22-Aug-2016 16:06:03.217 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+22-Aug-2016 16:06:03.217 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+22-Aug-2016 16:06:03.219 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+22-Aug-2016 16:06:03.219 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 499 ms
+22-Aug-2016 16:06:03.235 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+22-Aug-2016 16:06:03.235 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.32
+22-Aug-2016 16:06:06.732 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+
+[36m
+  __  ____     _     ____  __  
+ / / / ___|   / \   / ___| \ \ 
+| | | |      / _ \  \___ \  | |
+| | | |___  / ___ \  ___) | | |
+| |  \____|/_/   \_\|____/  | |
+ \_\                       /_/ 
+
+CAS Version: 5.0.0.RC1-SNAPSHOT
+Build Date/Time: 2016-08-18T17:02:48Z
+Java Home: /Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre
+Java Vendor: Oracle Corporation
+Java Version: 1.8.0_60
+OS Architecture: x86_64
+OS Name: Mac OS X
+OS Version: 10.11.5
+
+[0m
+2016-08-22 16:06:09,074 INFO [org.apereo.cas.mgmt.web.CasManagementWebApplicationServletInitializer] - <The following profiles are active: native>
+2016-08-22 16:06:10,249 WARN [org.springframework.context.annotation.ConfigurationClassPostProcessor] - <Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.>
+2016-08-22 16:06:12,069 WARN [org.apereo.cas.services.InMemoryServiceRegistryDaoImpl] - <Runtime memory is used as the persistence storage for retrieving and persisting service definitions. Changes that are made to service definitions during runtime WILL be LOST upon container restarts.>
+2016-08-22 16:06:12,087 INFO [org.apereo.cas.services.DefaultServicesManagerImpl] - <Loaded 0 services from InMemoryServiceRegistryDaoImpl.>
+2016-08-22 16:06:13,741 INFO [org.apereo.cas.services.DefaultServicesManagerImpl] - <Loaded 3 services from InMemoryServiceRegistryDaoImpl.>
+2016-08-22 16:06:17,101 INFO [org.apereo.cas.configuration.CasConfigurationRebinder] - <Reloaded CAS configuration cas-org.apereo.cas.configuration.CasConfigurationProperties>
+2016-08-22 16:06:18,157 INFO [org.apereo.cas.mgmt.web.CasManagementWebApplicationServletInitializer] - <Started CasManagementWebApplicationServletInitializer in 10.887 seconds (JVM running for 15.569)>
+22-Aug-2016 16:06:18.187 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/cas-services.war has finished in 14,937 ms
+22-Aug-2016 16:06:18.188 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/cas.war
+
+[36m
+  __  ____     _     ____  __  
+ / / / ___|   / \   / ___| \ \ 
+| | | |      / _ \  \___ \  | |
+| | | |___  / ___ \  ___) | | |
+| |  \____|/_/   \_\|____/  | |
+ \_\                       /_/ 
+
+CAS Version: 5.0.0.RC1-SNAPSHOT
+Build Date/Time: 2016-08-18T17:02:48Z
+Java Home: /Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre
+Java Vendor: Oracle Corporation
+Java Version: 1.8.0_60
+OS Architecture: x86_64
+OS Name: Mac OS X
+OS Version: 10.11.5
+
+[0m
+2016-08-22 16:06:23,029 INFO [org.apereo.cas.web.CasWebApplicationServletInitializer] - <The following profiles are active: native>
+2016-08-22 16:06:25,944 WARN [org.apereo.cas.services.InMemoryServiceRegistryDaoImpl] - <Runtime memory is used as the persistence storage for retrieving and persisting service definitions. Changes that are made to service definitions during runtime WILL be LOST upon container restarts.>
+2016-08-22 16:06:25,965 DEBUG [org.apereo.cas.services.DefaultServicesManagerImpl] - <Loading services from InMemoryServiceRegistryDaoImpl>
+2016-08-22 16:06:25,968 INFO [org.apereo.cas.services.DefaultServicesManagerImpl] - <Loaded 0 services from InMemoryServiceRegistryDaoImpl.>
+2016-08-22 16:06:29,639 DEBUG [org.apereo.cas.web.view.Cas30JsonResponseView] - <Initializing Cas30JsonResponseView>
+2016-08-22 16:06:29,767 WARN [org.apereo.cas.config.CasSecurityContextConfiguration] - <[36m>
+2016-08-22 16:06:29,770 WARN [org.apereo.cas.config.CasSecurityContextConfiguration] - <
+
+ ____   _____   ___   ____   _ 
+/ ___| |_   _| / _ \ |  _ \ | |
+\___ \   | |  | | | || |_) || |
+ ___) |  | |  | |_| ||  __/ |_|
+|____/   |_|   \___/ |_|    (_)
+                               
+
+CAS is configured to accept a static list of credentials for authentication.
+While this is generally useful for demo purposes, it is STRONGLY recommended
+that you DISABLE this authentication method (by SETTING 'cas.authn.accept.users'
+to a blank value) and switch to a mode that is more suitable for production. 
+>
+2016-08-22 16:06:29,770 WARN [org.apereo.cas.config.CasSecurityContextConfiguration] - <[0m>
+2016-08-22 16:06:29,953 DEBUG [org.apereo.cas.services.ServiceRegistryInitializer] - <Service registry database will be auto-initialized from default JSON services>
+2016-08-22 16:06:30,089 DEBUG [org.apereo.cas.services.ServiceRegistryInitializer] - <Initializing service registry database with the id=52497044623309,name=Services Management Web Application,description=Services Management Web Application,serviceId=https://localhost:8443/cas-services.*,usernameAttributeProvider=org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider@d,theme=<null>,evaluationOrder=3,logoutType=BACK_CHANNEL,attributeReleasePolicy=org.apereo.cas.services.ReturnAllowedAttributeReleasePolicy@74920cfc[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@20c1b458[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,allowedAttributes=[]],accessStrategy=org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy@7041fe0c[enabled=true,ssoEnabled=true,requireAllAttributes=true,requiredAttributes={},unauthorizedRedirectUrl=<null>,caseInsensitive=false,rejectedAttributes={}],publicKey=<null>,proxyPolicy=org.apereo.cas.services.RefuseRegisteredServiceProxyPolicy@1e4a2b3,logo=<null>,logoutUrl=<null>,requiredHandlers=[],properties={},multifactorPolicy=org.apereo.cas.services.DefaultRegisteredServiceMultifactorPolicy@483b995c[multifactorAuthenticationProviders=[],failureMode=CLOSED,principalAttributeNameTrigger=<null>,principalAttributeValueToMatch=<null>],<null> JSON service definition...>
+2016-08-22 16:06:30,090 DEBUG [org.apereo.cas.services.ServiceRegistryInitializer] - <Initializing service registry database with the id=10000001,name=HTTPS and IMAPS,description=This service definition authorizes all application urls that support HTTPS and IMAPS protocols.,serviceId=^(https|imaps)://.*,usernameAttributeProvider=org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider@d,theme=<null>,evaluationOrder=10000,logoutType=BACK_CHANNEL,attributeReleasePolicy=org.apereo.cas.services.ReturnAllowedAttributeReleasePolicy@3775bfc9[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@126b99de[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,allowedAttributes=[]],accessStrategy=org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy@5bc19a3f[enabled=true,ssoEnabled=true,requireAllAttributes=true,requiredAttributes={},unauthorizedRedirectUrl=<null>,caseInsensitive=false,rejectedAttributes={}],publicKey=<null>,proxyPolicy=org.apereo.cas.services.RefuseRegisteredServiceProxyPolicy@4fa42023,logo=<null>,logoutUrl=<null>,requiredHandlers=[],properties={},multifactorPolicy=org.apereo.cas.services.DefaultRegisteredServiceMultifactorPolicy@55357ca8[multifactorAuthenticationProviders=[],failureMode=CLOSED,principalAttributeNameTrigger=<null>,principalAttributeValueToMatch=<null>],<null> JSON service definition...>
+2016-08-22 16:06:30,091 DEBUG [org.apereo.cas.services.ServiceRegistryInitializer] - <Initializing service registry database with the id=52497044623301,name=Services Management Web Application,description=Services Management Web Application,serviceId=http://localhost:8080/cas-services.*,usernameAttributeProvider=org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider@d,theme=<null>,evaluationOrder=3,logoutType=BACK_CHANNEL,attributeReleasePolicy=org.apereo.cas.services.ReturnAllowedAttributeReleasePolicy@1b5eaab9[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@4c19db8f[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,allowedAttributes=[]],accessStrategy=org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy@2399b467[enabled=true,ssoEnabled=true,requireAllAttributes=true,requiredAttributes={},unauthorizedRedirectUrl=<null>,caseInsensitive=false,rejectedAttributes={}],publicKey=<null>,proxyPolicy=org.apereo.cas.services.RefuseRegisteredServiceProxyPolicy@5d375341,logo=<null>,logoutUrl=<null>,requiredHandlers=[],properties={},multifactorPolicy=org.apereo.cas.services.DefaultRegisteredServiceMultifactorPolicy@33d23efd[multifactorAuthenticationProviders=[],failureMode=CLOSED,principalAttributeNameTrigger=<null>,principalAttributeValueToMatch=<null>],<null> JSON service definition...>
+2016-08-22 16:06:30,091 DEBUG [org.apereo.cas.services.ServiceRegistryInitializer] - <Initializing service registry database with the id=10000002,name=Apereo,description=Apereo foundation sample service,serviceId=^https://www.apereo.org,usernameAttributeProvider=org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider@d,theme=apereo,evaluationOrder=1,logoutType=BACK_CHANNEL,attributeReleasePolicy=org.apereo.cas.services.ReturnAllowedAttributeReleasePolicy@31955eab[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@5fc1fe72[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,allowedAttributes=[]],accessStrategy=org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy@38f5fa46[enabled=true,ssoEnabled=true,requireAllAttributes=true,requiredAttributes={},unauthorizedRedirectUrl=<null>,caseInsensitive=false,rejectedAttributes={}],publicKey=<null>,proxyPolicy=org.apereo.cas.services.RefuseRegisteredServiceProxyPolicy@1a722534,logo=<null>,logoutUrl=<null>,requiredHandlers=[],properties={},multifactorPolicy=org.apereo.cas.services.DefaultRegisteredServiceMultifactorPolicy@1097b90[multifactorAuthenticationProviders=[],failureMode=CLOSED,principalAttributeNameTrigger=<null>,principalAttributeValueToMatch=<null>],<null> JSON service definition...>
+2016-08-22 16:06:30,091 DEBUG [org.apereo.cas.services.ServiceRegistryInitializer] - <Initializing service registry database with the id=52497044623302,name=CAS Example Protected Web Application via TLS,description=Services Management Web Application,serviceId=https://localhost:8443/protected-web-app.*,usernameAttributeProvider=org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider@d,theme=<null>,evaluationOrder=1,logoutType=BACK_CHANNEL,attributeReleasePolicy=org.apereo.cas.services.ReturnAllAttributeReleasePolicy@51eb27ad[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@46dbd01c[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false],accessStrategy=org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy@4cd0cf32[enabled=true,ssoEnabled=true,requireAllAttributes=true,requiredAttributes={},unauthorizedRedirectUrl=<null>,caseInsensitive=false,rejectedAttributes={}],publicKey=<null>,proxyPolicy=org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy@64fe8c3[^https?://.*],logo=<null>,logoutUrl=<null>,requiredHandlers=[],properties={},multifactorPolicy=org.apereo.cas.services.DefaultRegisteredServiceMultifactorPolicy@e1171e8[multifactorAuthenticationProviders=[],failureMode=CLOSED,principalAttributeNameTrigger=<null>,principalAttributeValueToMatch=<null>],<null> JSON service definition...>
+2016-08-22 16:06:30,100 DEBUG [org.apereo.cas.services.DefaultServicesManagerImpl] - <Loading services from InMemoryServiceRegistryDaoImpl>
+2016-08-22 16:06:30,100 DEBUG [org.apereo.cas.services.DefaultServicesManagerImpl] - <Adding registered service https://localhost:8443/cas-services.*>
+2016-08-22 16:06:30,101 DEBUG [org.apereo.cas.services.DefaultServicesManagerImpl] - <Adding registered service ^(https|imaps)://.*>
+2016-08-22 16:06:30,101 DEBUG [org.apereo.cas.services.DefaultServicesManagerImpl] - <Adding registered service http://localhost:8080/cas-services.*>
+2016-08-22 16:06:30,101 DEBUG [org.apereo.cas.services.DefaultServicesManagerImpl] - <Adding registered service ^https://www.apereo.org>
+2016-08-22 16:06:30,101 DEBUG [org.apereo.cas.services.DefaultServicesManagerImpl] - <Adding registered service https://localhost:8443/protected-web-app.*>
+2016-08-22 16:06:30,101 INFO [org.apereo.cas.services.DefaultServicesManagerImpl] - <Loaded 5 services from InMemoryServiceRegistryDaoImpl.>
+2016-08-22 16:06:30,577 DEBUG [org.apereo.cas.web.support.DefaultCasCookieValueManager] - <Using cipher [class com.sun.proxy.$Proxy275 to encrypt and decode the cookie>
+2016-08-22 16:06:33,525 DEBUG [org.apereo.cas.configuration.CasConfigurationRebinder] - <Received event org.springframework.cloud.context.environment.EnvironmentChangeEvent[source=[]]>
+2016-08-22 16:06:33,525 DEBUG [org.apereo.cas.configuration.CasConfigurationRebinder] - <Reloading CAS configuration via cas-org.apereo.cas.configuration.CasConfigurationProperties>
+2016-08-22 16:06:33,610 INFO [org.apereo.cas.configuration.CasConfigurationRebinder] - <Reloaded CAS configuration cas-org.apereo.cas.configuration.CasConfigurationProperties>
+2016-08-22 16:06:34,683 INFO [org.apereo.cas.configuration.support.Beans] - <Ticket registry encryption/signing is turned off. This may NOT be safe in a clustered production environment. Consider using other choices to handle encryption, signing and verification of ticket registry tickets.>
+2016-08-22 16:06:34,686 WARN [org.apereo.cas.ticket.registry.DefaultTicketRegistry] - <Runtime memory is used as the persistence storage for retrieving and managing tickets. Tickets that are issued during runtime will be LOST upon container restarts. This MAY impact SSO functionality.>
+2016-08-22 16:06:34,762 WARN [org.apereo.cas.util.cipher.WebflowConversationStateCipherExecutor] - <Secret key for signing is not defined. CAS will attempt to auto-generate the signing key>
+2016-08-22 16:06:34,768 WARN [org.apereo.cas.util.cipher.WebflowConversationStateCipherExecutor] - <Generated signing key YVzXbZqHRePCQO_iXpPSHUu8kw_pMvlNSTvTjSQ0-YkAtGuUrQVc_cziOlX2wgqqRuyf1YiiLMmchCzCAZ7m5A of size 512. The generated key MUST be added to CAS settings.>
+2016-08-22 16:06:34,768 WARN [org.apereo.cas.util.cipher.WebflowConversationStateCipherExecutor] - <No encryption key is defined. CAS will attempt to auto-generate keys>
+2016-08-22 16:06:34,768 WARN [org.apereo.cas.util.cipher.WebflowConversationStateCipherExecutor] - <Generated encryption key gVhLwmOgTzsDplrx of size 16. The generated key MUST be added to CAS settings.>
+2016-08-22 16:06:34,799 WARN [org.apereo.cas.util.cipher.TicketGrantingCookieCipherExecutor] - <Secret key for encryption is not defined. CAS will attempt to auto-generate the encryption key>
+2016-08-22 16:06:34,799 WARN [org.apereo.cas.util.cipher.TicketGrantingCookieCipherExecutor] - <Generated encryption key q5pPmXnUxGhejUc-31wPtRbyCHWLiOwx1kwC8skPcmI of size 256. The generated key MUST be added to CAS settings.>
+2016-08-22 16:06:34,799 WARN [org.apereo.cas.util.cipher.TicketGrantingCookieCipherExecutor] - <Secret key for signing is not defined. CAS will attempt to auto-generate the signing key>
+2016-08-22 16:06:34,799 WARN [org.apereo.cas.util.cipher.TicketGrantingCookieCipherExecutor] - <Generated signing key uKYXnby_JwsloRUNjZ6lYAI0RdcU2vngtX8sCw1YdJk6NLDRDHwzdFKK5khptrjbLUc_lAxGBhZWt3f48EJL9g of size 512. The generated key MUST be added to CAS settings.>
+2016-08-22 16:06:34,801 DEBUG [org.apereo.cas.util.cipher.TicketGrantingCookieCipherExecutor] - <Initialized cipher encryption sequence via [A128CBC-HS256]>
+2016-08-22 16:06:35,101 INFO [org.apereo.cas.web.CasWebApplicationServletInitializer] - <Started CasWebApplicationServletInitializer in 13.79 seconds (JVM running for 32.513)>
+22-Aug-2016 16:06:35.115 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/cas.war has finished in 16,927 ms
+22-Aug-2016 16:06:35.116 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/keepalive.war
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+22-Aug-2016 16:06:35.151 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/keepalive.war has finished in 35 ms
+22-Aug-2016 16:06:35.152 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/protected-web-app.war
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+22-Aug-2016 16:06:35.222 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/protected-web-app.war has finished in 70 ms
+22-Aug-2016 16:06:35.222 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/docs
+22-Aug-2016 16:06:35.231 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/docs has finished in 9 ms
+22-Aug-2016 16:06:35.231 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/examples
+22-Aug-2016 16:06:35.324 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/examples has finished in 93 ms
+22-Aug-2016 16:06:35.324 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/host-manager
+22-Aug-2016 16:06:35.336 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/host-manager has finished in 12 ms
+22-Aug-2016 16:06:35.336 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/manager
+22-Aug-2016 16:06:35.345 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/manager has finished in 9 ms
+22-Aug-2016 16:06:35.345 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/ROOT
+22-Aug-2016 16:06:35.351 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/xxxx.xxxx/Downloads/apache-tomcat-8.0.32/webapps/ROOT has finished in 6 ms
+22-Aug-2016 16:06:35.354 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+22-Aug-2016 16:06:35.358 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8443"]
+22-Aug-2016 16:06:35.359 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+22-Aug-2016 16:06:35.359 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 32141 ms
+2016-08-22 16:06:38,155 INFO [org.apereo.cas.services.DefaultServicesManagerImpl] - <Loaded 3 services from InMemoryServiceRegistryDaoImpl.>
+2016-08-22 16:06:44,193 DEBUG [org.apereo.cas.authentication.RegisteredServiceAuthenticationHandlerResolver] - <Authentication handlers used for this transaction are [org.apereo.cas.authentication.handler.support.HttpBasedServiceCredentialsAuthenticationHandler@6b53cbb3, org.apereo.cas.authentication.AcceptUsersAuthenticationHandler@1cdadf92]>
+2016-08-22 16:06:44,200 INFO [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <AcceptUsersAuthenticationHandler successfully authenticated casuser>
+2016-08-22 16:06:44,201 DEBUG [org.apereo.cas.authentication.principal.PersonDirectoryPrincipalResolver] - <Attempting to resolve a principal...>
+2016-08-22 16:06:44,201 DEBUG [org.apereo.cas.authentication.principal.PersonDirectoryPrincipalResolver] - <Creating SimplePrincipal for [casuser]>
+2016-08-22 16:06:44,202 DEBUG [org.apereo.services.persondir.support.CachingPersonAttributeDaoImpl] - <Created seed map='{username=[casuser]}' for uid='casuser'>
+2016-08-22 16:06:44,205 DEBUG [org.apereo.services.persondir.support.AttributeBasedCacheKeyGenerator] - <Generated cache Map {username=[casuser]} from seed Map {username=[casuser]}>
+2016-08-22 16:06:44,206 DEBUG [org.apereo.services.persondir.support.AttributeBasedCacheKeyGenerator] - <Generated cache key '-785177777|-785124887' for MethodInvocation='org.apereo.services.persondir.support.CachingPersonAttributeDaoImpl$PersonAttributeDaoMethodInvocation@4e28865e'>
+2016-08-22 16:06:44,207 DEBUG [org.apereo.services.persondir.support.MergingPersonAttributeDaoImpl] - <Retrieved attributes='[AttributeNamedPersonImpl[name=casuser,attributes={uid=[uid], cn=[commonName], affiliation=[groupMembership], displayName=[displayName], username=[casuser]}]]' for query='{username=[casuser]}', isFirstQuery=false, currentlyConsidering='org.apereo.services.persondir.support.NamedStubPersonAttributeDao@6f36ea71', resultAttributes='null'>
+2016-08-22 16:06:44,207 DEBUG [org.apereo.services.persondir.support.MergingPersonAttributeDaoImpl] - <Aggregated search results '[AttributeNamedPersonImpl[name=casuser,attributes={uid=[uid], cn=[commonName], affiliation=[groupMembership], displayName=[displayName], username=[casuser]}]]' for query='{username=[casuser]}'>
+2016-08-22 16:06:44,210 DEBUG [org.apereo.services.persondir.support.CachingPersonAttributeDaoImpl] - <Retrieved query from wrapped IPersonAttributeDao and stored in cache for stubAttributeRepository. key='-785177777|-785124887', results='[AttributeNamedPersonImpl[name=casuser,attributes={uid=[uid], cn=[commonName], affiliation=[groupMembership], displayName=[displayName], username=[casuser]}]]'>
+2016-08-22 16:06:44,211 DEBUG [org.apereo.services.persondir.support.CachingPersonAttributeDaoImpl.statistics] - <Cache Stats stubAttributeRepository: queries=1, hits=0, misses=1>
+2016-08-22 16:06:44,214 DEBUG [org.apereo.cas.authentication.principal.PersonDirectoryPrincipalResolver] - <Retrieved [5] attribute(s) from the repository>
+2016-08-22 16:06:44,216 DEBUG [org.apereo.cas.authentication.principal.PersonDirectoryPrincipalResolver] - <Found attribute [uid]>
+2016-08-22 16:06:44,217 DEBUG [org.apereo.cas.authentication.principal.PersonDirectoryPrincipalResolver] - <Found attribute [cn]>
+2016-08-22 16:06:44,217 DEBUG [org.apereo.cas.authentication.principal.PersonDirectoryPrincipalResolver] - <Found attribute [affiliation]>
+2016-08-22 16:06:44,217 DEBUG [org.apereo.cas.authentication.principal.PersonDirectoryPrincipalResolver] - <Found attribute [displayName]>
+2016-08-22 16:06:44,218 DEBUG [org.apereo.cas.authentication.principal.PersonDirectoryPrincipalResolver] - <Found attribute [username]>
+2016-08-22 16:06:44,218 DEBUG [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <org.apereo.cas.authentication.principal.PersonDirectoryPrincipalResolver@34cfaba3 resolved casuser from casuser>
+2016-08-22 16:06:44,219 DEBUG [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <Final principal resolved for this authentication event is casuser>
+2016-08-22 16:06:44,220 INFO [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <Authenticated casuser with credentials [casuser].>
+2016-08-22 16:06:44,220 DEBUG [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <Attribute map for casuser: {uid=uid, cn=commonName, affiliation=groupMembership, displayName=displayName, username=casuser}>
+2016-08-22 16:06:44,222 DEBUG [org.apereo.cas.audit.spi.ThreadLocalPrincipalResolver] - <Resolving principal at audit point [execution(Authentication org.apereo.cas.authentication.AbstractAuthenticationManager.authenticate(AuthenticationTransaction))]>
+2016-08-22 16:06:44,232 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: casuser
+WHAT: Supplied credentials: [casuser]
+ACTION: AUTHENTICATION_SUCCESS
+APPLICATION: CAS
+WHEN: Mon Aug 22 16:06:44 EDT 2016
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
+2016-08-22 16:06:44,235 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationTransactionManager] - <Successful authentication; Collecting authentication result [org.apereo.cas.authentication.DefaultAuthentication@ec468f68]>
+2016-08-22 16:06:44,236 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collecting authentication history based on [1] authentication events>
+2016-08-22 16:06:44,242 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Evaluating authentication principal [casuser] for inclusion in result>
+2016-08-22 16:06:44,242 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected principal attributes [{uid=uid, cn=commonName, affiliation=groupMembership, displayName=displayName, username=casuser}] for inclusion in this result for principal [casuser]>
+2016-08-22 16:06:44,243 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected single authentication attribute [authenticationMethod] -> [AcceptUsersAuthenticationHandler]>
+2016-08-22 16:06:44,244 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected single authentication attribute [successfulAuthenticationHandlers] -> [[AcceptUsersAuthenticationHandler]]>
+2016-08-22 16:06:44,244 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Finalized authentication attributes [{authenticationMethod=AcceptUsersAuthenticationHandler, successfulAuthenticationHandlers=[AcceptUsersAuthenticationHandler]}] for inclusion in this authentication result>
+2016-08-22 16:06:44,251 DEBUG [org.apereo.cas.authentication.DefaultPrincipalElectionStrategy] - <Nominated [casuser] as the primary principal>
+2016-08-22 16:06:44,251 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Determined primary authentication principal to be [casuser]>
+2016-08-22 16:06:44,252 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected authentication attributes for this result are [{authenticationMethod=AcceptUsersAuthenticationHandler, successfulAuthenticationHandlers=[AcceptUsersAuthenticationHandler]}]>
+2016-08-22 16:06:44,252 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Authentication result commenced at [2016-08-22T16:06:44.252-04:00[America/New_York]]>
+2016-08-22 16:06:44,253 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Building an authentication result for authentication org.apereo.cas.authentication.DefaultAuthentication@b9a2dae8 and service null>
+2016-08-22 16:06:44,286 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistry] - <Added ticket [TGT-**********************************************mQUqIraBH0-192] to registry.>
+2016-08-22 16:06:44,287 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Publishing org.apereo.cas.support.events.CasTicketGrantingTicketCreatedEvent@3f0f984f[ticketGrantingTicket=TGT-**********************************************mQUqIraBH0-192]>
+2016-08-22 16:06:44,289 DEBUG [org.apereo.cas.audit.spi.ThreadLocalPrincipalResolver] - <Resolving principal at audit point [execution(TicketGrantingTicket org.apereo.cas.CentralAuthenticationServiceImpl.createTicketGrantingTicket(AuthenticationResult))]>
+2016-08-22 16:06:44,290 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: casuser
+WHAT: TGT-**********************************************mQUqIraBH0-192
+ACTION: TICKET_GRANTING_TICKET_CREATED
+APPLICATION: CAS
+WHEN: Mon Aug 22 16:06:44 EDT 2016
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
+2016-08-22 16:06:44,410 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collecting authentication history based on [1] authentication events>
+2016-08-22 16:06:44,411 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Evaluating authentication principal [casuser] for inclusion in result>
+2016-08-22 16:06:44,411 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected principal attributes [{uid=uid, cn=commonName, affiliation=groupMembership, displayName=displayName, username=casuser}] for inclusion in this result for principal [casuser]>
+2016-08-22 16:06:44,411 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected single authentication attribute [authenticationMethod] -> [AcceptUsersAuthenticationHandler]>
+2016-08-22 16:06:44,412 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected single authentication attribute [successfulAuthenticationHandlers] -> [[AcceptUsersAuthenticationHandler]]>
+2016-08-22 16:06:44,412 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Finalized authentication attributes [{authenticationMethod=AcceptUsersAuthenticationHandler, successfulAuthenticationHandlers=[AcceptUsersAuthenticationHandler]}] for inclusion in this authentication result>
+2016-08-22 16:06:44,412 DEBUG [org.apereo.cas.authentication.DefaultPrincipalElectionStrategy] - <Nominated [casuser] as the primary principal>
+2016-08-22 16:06:44,413 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Determined primary authentication principal to be [casuser]>
+2016-08-22 16:06:44,413 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected authentication attributes for this result are [{authenticationMethod=AcceptUsersAuthenticationHandler, successfulAuthenticationHandlers=[AcceptUsersAuthenticationHandler]}]>
+2016-08-22 16:06:44,413 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Authentication result commenced at [2016-08-22T16:06:44.413-04:00[America/New_York]]>
+2016-08-22 16:06:44,414 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Building an authentication result for authentication org.apereo.cas.authentication.DefaultAuthentication@6e3b28a8 and service https://localhost:8443/protected-web-app/>
+2016-08-22 16:06:44,423 DEBUG [org.apereo.cas.util.RegexUtils] - <Pattern ^https://www.apereo.org is a valid regex.>
+2016-08-22 16:06:44,424 DEBUG [org.apereo.cas.util.RegexUtils] - <Pattern https://localhost:8443/protected-web-app.* is a valid regex.>
+2016-08-22 16:06:44,426 DEBUG [org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository] - <DefaultPrincipalAttributesRepository will return the collection of attributes directly associated with the principal object which are [{uid=uid, cn=commonName, affiliation=groupMembership, displayName=displayName, username=casuser}]>
+2016-08-22 16:06:44,427 DEBUG [org.apereo.cas.authentication.principal.cache.AbstractPrincipalAttributesRepository] - <Found [5] cached attributes for principal [casuser] that are {uid=uid, cn=commonName, affiliation=groupMembership, displayName=displayName, username=casuser}>
+2016-08-22 16:06:44,427 DEBUG [org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy] - <Skipping access strategy policy, since no attributes rules are defined>
+2016-08-22 16:06:44,429 DEBUG [org.apereo.cas.services.RegisteredServiceAccessStrategyUtils] - <Current authentication via ticket TGT-**********************************************mQUqIraBH0-192 allows service https://localhost:8443/protected-web-app/ to participate in the existing SSO session>
+2016-08-22 16:06:44,431 DEBUG [org.apereo.cas.ticket.DefaultServiceTicketFactory] - <Looking up service ticket id generator for [org.apereo.cas.authentication.principal.SimpleWebApplicationServiceImpl]>
+2016-08-22 16:06:44,436 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistry] - <Added ticket [TGT-**********************************************mQUqIraBH0-192] to registry.>
+2016-08-22 16:06:44,436 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistry] - <Added ticket [ST-1-pbhtA5brbBiYabVpygfn-192] to registry.>
+2016-08-22 16:06:44,436 INFO [org.apereo.cas.CentralAuthenticationServiceImpl] - <Granted ticket [ST-1-pbhtA5brbBiYabVpygfn-192] for service [https://localhost:8443/protected-web-app/] and principal [casuser]>
+2016-08-22 16:06:44,437 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Publishing org.apereo.cas.support.events.CasServiceTicketGrantedEvent@32a235a5[ticketGrantingTicket=TGT-**********************************************mQUqIraBH0-192,serviceTicket=ST-1-pbhtA5brbBiYabVpygfn-192]>
+2016-08-22 16:06:44,437 DEBUG [org.apereo.cas.audit.spi.ThreadLocalPrincipalResolver] - <Resolving principal at audit point [execution(ServiceTicket org.apereo.cas.CentralAuthenticationServiceImpl.grantServiceTicket(String,Service,AuthenticationResult))]>
+2016-08-22 16:06:44,438 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: casuser
+WHAT: ST-1-pbhtA5brbBiYabVpygfn-192 for https://localhost:8443/protected-web-app/
+ACTION: SERVICE_TICKET_CREATED
+APPLICATION: CAS
+WHEN: Mon Aug 22 16:06:44 EDT 2016
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
+2016-08-22 16:06:44,459 DEBUG [org.apereo.cas.web.support.DefaultArgumentExtractor] - <Created https://localhost:8443/protected-web-app/ based on org.apereo.cas.authentication.principal.WebApplicationServiceFactory@25d4f63b>
+2016-08-22 16:06:44,460 DEBUG [org.apereo.cas.web.support.DefaultArgumentExtractor] - <Extractor generated service type org.apereo.cas.authentication.principal.SimpleWebApplicationServiceImpl for: https://localhost:8443/protected-web-app/>
+2016-08-22 16:06:44,464 DEBUG [org.apereo.cas.authentication.RegisteredServiceAuthenticationHandlerResolver] - <Authentication handlers used for this transaction are [org.apereo.cas.authentication.handler.support.HttpBasedServiceCredentialsAuthenticationHandler@6b53cbb3, org.apereo.cas.authentication.AcceptUsersAuthenticationHandler@1cdadf92]>
+2016-08-22 16:06:44,466 DEBUG [org.apereo.cas.authentication.handler.support.HttpBasedServiceCredentialsAuthenticationHandler] - <Attempting to authenticate https://localhost:8443/protected-web-app/proxyUrl>
+2016-08-22 16:06:44,529 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - <Connecting socket to localhost/127.0.0.1:8443 with timeout 5000>
+2016-08-22 16:06:44,538 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - <Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]>
+2016-08-22 16:06:44,538 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - <Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]>
+2016-08-22 16:06:44,538 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - <Starting handshake>
+2016-08-22 16:06:44,561 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - <Secure session established>
+2016-08-22 16:06:44,561 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - < negotiated protocol: TLSv1.2>
+2016-08-22 16:06:44,562 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - < negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256>
+2016-08-22 16:06:44,584 DEBUG [org.apereo.cas.util.http.SimpleHttpClient] - <Response code from server matched 200.>
+2016-08-22 16:06:44,585 INFO [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <HttpBasedServiceCredentialsAuthenticationHandler successfully authenticated https://localhost:8443/protected-web-app/proxyUrl>
+2016-08-22 16:06:44,585 DEBUG [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <org.apereo.cas.authentication.principal.BasicPrincipalResolver@16daff9d resolved https://localhost:8443/protected-web-app/proxyUrl from https://localhost:8443/protected-web-app/proxyUrl>
+2016-08-22 16:06:44,586 DEBUG [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <Final principal resolved for this authentication event is https://localhost:8443/protected-web-app/proxyUrl>
+2016-08-22 16:06:44,587 INFO [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <Authenticated https://localhost:8443/protected-web-app/proxyUrl with credentials [https://localhost:8443/protected-web-app/proxyUrl].>
+2016-08-22 16:06:44,587 DEBUG [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <Attribute map for https://localhost:8443/protected-web-app/proxyUrl: {}>
+2016-08-22 16:06:44,588 DEBUG [org.apereo.cas.audit.spi.ThreadLocalPrincipalResolver] - <Resolving principal at audit point [execution(Authentication org.apereo.cas.authentication.AbstractAuthenticationManager.authenticate(AuthenticationTransaction))]>
+2016-08-22 16:06:44,588 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: https://localhost:8443/protected-web-app/proxyUrl
+WHAT: Supplied credentials: [https://localhost:8443/protected-web-app/proxyUrl]
+ACTION: AUTHENTICATION_SUCCESS
+APPLICATION: CAS
+WHEN: Mon Aug 22 16:06:44 EDT 2016
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
+2016-08-22 16:06:44,588 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationTransactionManager] - <Successful authentication; Collecting authentication result [org.apereo.cas.authentication.DefaultAuthentication@17042f67]>
+2016-08-22 16:06:44,588 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collecting authentication history based on [1] authentication events>
+2016-08-22 16:06:44,589 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Evaluating authentication principal [https://localhost:8443/protected-web-app/proxyUrl] for inclusion in result>
+2016-08-22 16:06:44,589 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected principal attributes [{}] for inclusion in this result for principal [https://localhost:8443/protected-web-app/proxyUrl]>
+2016-08-22 16:06:44,589 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected single authentication attribute [authenticationMethod] -> [HttpBasedServiceCredentialsAuthenticationHandler]>
+2016-08-22 16:06:44,589 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected single authentication attribute [successfulAuthenticationHandlers] -> [[HttpBasedServiceCredentialsAuthenticationHandler]]>
+2016-08-22 16:06:44,589 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Finalized authentication attributes [{authenticationMethod=HttpBasedServiceCredentialsAuthenticationHandler, successfulAuthenticationHandlers=[HttpBasedServiceCredentialsAuthenticationHandler]}] for inclusion in this authentication result>
+2016-08-22 16:06:44,590 DEBUG [org.apereo.cas.authentication.DefaultPrincipalElectionStrategy] - <Nominated [https://localhost:8443/protected-web-app/proxyUrl] as the primary principal>
+2016-08-22 16:06:44,590 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Determined primary authentication principal to be [https://localhost:8443/protected-web-app/proxyUrl]>
+2016-08-22 16:06:44,590 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected authentication attributes for this result are [{authenticationMethod=HttpBasedServiceCredentialsAuthenticationHandler, successfulAuthenticationHandlers=[HttpBasedServiceCredentialsAuthenticationHandler]}]>
+2016-08-22 16:06:44,590 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Authentication result commenced at [2016-08-22T16:06:44.590-04:00[America/New_York]]>
+2016-08-22 16:06:44,590 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Building an authentication result for authentication org.apereo.cas.authentication.DefaultAuthentication@635bc4e7 and service https://localhost:8443/protected-web-app/>
+2016-08-22 16:06:44,591 DEBUG [org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository] - <DefaultPrincipalAttributesRepository will return the collection of attributes directly associated with the principal object which are [{}]>
+2016-08-22 16:06:44,591 DEBUG [org.apereo.services.persondir.support.CachingPersonAttributeDaoImpl] - <Created seed map='{username=[https://localhost:8443/protected-web-app/proxyUrl]}' for uid='https://localhost:8443/protected-web-app/proxyUrl'>
+2016-08-22 16:06:44,592 DEBUG [org.apereo.services.persondir.support.AttributeBasedCacheKeyGenerator] - <Generated cache Map {username=[https://localhost:8443/protected-web-app/proxyUrl]} from seed Map {username=[https://localhost:8443/protected-web-app/proxyUrl]}>
+2016-08-22 16:06:44,592 DEBUG [org.apereo.services.persondir.support.AttributeBasedCacheKeyGenerator] - <Generated cache key '-1811948958|-1811987438' for MethodInvocation='org.apereo.services.persondir.support.CachingPersonAttributeDaoImpl$PersonAttributeDaoMethodInvocation@502659de'>
+2016-08-22 16:06:44,592 DEBUG [org.apereo.services.persondir.support.MergingPersonAttributeDaoImpl] - <Retrieved attributes='[AttributeNamedPersonImpl[name=https://localhost:8443/protected-web-app/proxyUrl,attributes={uid=[uid], cn=[commonName], affiliation=[groupMembership], displayName=[displayName], username=[https://localhost:8443/protected-web-app/proxyUrl]}]]' for query='{username=[https://localhost:8443/protected-web-app/proxyUrl]}', isFirstQuery=false, currentlyConsidering='org.apereo.services.persondir.support.NamedStubPersonAttributeDao@6f36ea71', resultAttributes='null'>
+2016-08-22 16:06:44,592 DEBUG [org.apereo.services.persondir.support.MergingPersonAttributeDaoImpl] - <Aggregated search results '[AttributeNamedPersonImpl[name=https://localhost:8443/protected-web-app/proxyUrl,attributes={uid=[uid], cn=[commonName], affiliation=[groupMembership], displayName=[displayName], username=[https://localhost:8443/protected-web-app/proxyUrl]}]]' for query='{username=[https://localhost:8443/protected-web-app/proxyUrl]}'>
+2016-08-22 16:06:44,593 DEBUG [org.apereo.services.persondir.support.CachingPersonAttributeDaoImpl] - <Retrieved query from wrapped IPersonAttributeDao and stored in cache for stubAttributeRepository. key='-1811948958|-1811987438', results='[AttributeNamedPersonImpl[name=https://localhost:8443/protected-web-app/proxyUrl,attributes={uid=[uid], cn=[commonName], affiliation=[groupMembership], displayName=[displayName], username=[https://localhost:8443/protected-web-app/proxyUrl]}]]'>
+2016-08-22 16:06:44,593 DEBUG [org.apereo.services.persondir.support.CachingPersonAttributeDaoImpl.statistics] - <Cache Stats stubAttributeRepository: queries=2, hits=0, misses=2>
+2016-08-22 16:06:44,593 DEBUG [org.apereo.cas.authentication.principal.cache.AbstractPrincipalAttributesRepository] - <Found [5] attributes for principal [https://localhost:8443/protected-web-app/proxyUrl] from the attribute repository.>
+2016-08-22 16:06:44,593 DEBUG [org.apereo.cas.authentication.principal.cache.AbstractPrincipalAttributesRepository] - <No merging strategy found, so attributes retrieved from the repository will be used instead.>
+2016-08-22 16:06:44,597 DEBUG [org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository] - <Using https://localhost:8443/protected-web-app/proxyUrl, no caching takes place for DefaultPrincipalAttributesRepository to add attributes.>
+2016-08-22 16:06:44,598 DEBUG [org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy] - <Skipping access strategy policy, since no attributes rules are defined>
+2016-08-22 16:06:44,599 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Generated proxy granting ticket [PGT-**********************************************sunTXHHiQA-192] based off of [ST-1-pbhtA5brbBiYabVpygfn-192]>
+2016-08-22 16:06:44,599 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistry] - <Added ticket [PGT-**********************************************sunTXHHiQA-192] to registry.>
+2016-08-22 16:06:44,599 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Publishing org.apereo.cas.support.events.CasProxyGrantingTicketCreatedEvent@4779cf91[ticketGrantingTicket=PGT-**********************************************sunTXHHiQA-192]>
+2016-08-22 16:06:44,600 DEBUG [org.apereo.cas.audit.spi.ThreadLocalPrincipalResolver] - <Resolving principal at audit point [execution(ProxyGrantingTicket org.apereo.cas.CentralAuthenticationServiceImpl.createProxyGrantingTicket(String,AuthenticationResult))]>
+2016-08-22 16:06:44,600 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: https://localhost:8443/protected-web-app/proxyUrl
+WHAT: PGT-**********************************************sunTXHHiQA-192
+ACTION: PROXY_GRANTING_TICKET_CREATED
+APPLICATION: CAS
+WHEN: Mon Aug 22 16:06:44 EDT 2016
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
+2016-08-22 16:06:44,600 DEBUG [org.apereo.cas.web.ServiceValidateController] - <Generated proxy-granting ticket [PGT-**********************************************sunTXHHiQA-192] off of service ticket [ST-1-pbhtA5brbBiYabVpygfn-192] and credential [https://localhost:8443/protected-web-app/proxyUrl]>
+2016-08-22 16:06:44,602 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Located registered service definition id=52497044623302,name=CAS Example Protected Web Application via TLS,description=Services Management Web Application,serviceId=https://localhost:8443/protected-web-app.*,usernameAttributeProvider=org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider@d,theme=<null>,evaluationOrder=1,logoutType=BACK_CHANNEL,attributeReleasePolicy=org.apereo.cas.services.ReturnAllAttributeReleasePolicy@51eb27ad[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@46dbd01c[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false],accessStrategy=org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy@4cd0cf32[enabled=true,ssoEnabled=true,requireAllAttributes=true,requiredAttributes={},unauthorizedRedirectUrl=<null>,caseInsensitive=false,rejectedAttributes={}],publicKey=<null>,proxyPolicy=org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy@64fe8c3[^https?://.*],logo=<null>,logoutUrl=<null>,requiredHandlers=[],properties={},multifactorPolicy=org.apereo.cas.services.DefaultRegisteredServiceMultifactorPolicy@e1171e8[multifactorAuthenticationProviders=[],failureMode=CLOSED,principalAttributeNameTrigger=<null>,principalAttributeValueToMatch=<null>],<null> from https://localhost:8443/protected-web-app/ to handle validation request>
+2016-08-22 16:06:44,603 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Attribute policy [org.apereo.cas.services.ReturnAllAttributeReleasePolicy@51eb27ad[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@46dbd01c[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false]] is associated with service [id=52497044623302,name=CAS Example Protected Web Application via TLS,description=Services Management Web Application,serviceId=https://localhost:8443/protected-web-app.*,usernameAttributeProvider=org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider@d,theme=<null>,evaluationOrder=1,logoutType=BACK_CHANNEL,attributeReleasePolicy=org.apereo.cas.services.ReturnAllAttributeReleasePolicy@51eb27ad[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@46dbd01c[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false],accessStrategy=org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy@4cd0cf32[enabled=true,ssoEnabled=true,requireAllAttributes=true,requiredAttributes={},unauthorizedRedirectUrl=<null>,caseInsensitive=false,rejectedAttributes={}],publicKey=<null>,proxyPolicy=org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy@64fe8c3[^https?://.*],logo=<null>,logoutUrl=<null>,requiredHandlers=[],properties={},multifactorPolicy=org.apereo.cas.services.DefaultRegisteredServiceMultifactorPolicy@e1171e8[multifactorAuthenticationProviders=[],failureMode=CLOSED,principalAttributeNameTrigger=<null>,principalAttributeValueToMatch=<null>],<null>]>
+2016-08-22 16:06:44,603 DEBUG [org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository] - <DefaultPrincipalAttributesRepository will return the collection of attributes directly associated with the principal object which are [{uid=uid, cn=commonName, affiliation=groupMembership, displayName=displayName, username=casuser}]>
+2016-08-22 16:06:44,603 DEBUG [org.apereo.cas.authentication.principal.cache.AbstractPrincipalAttributesRepository] - <Found [5] cached attributes for principal [casuser] that are {uid=uid, cn=commonName, affiliation=groupMembership, displayName=displayName, username=casuser}>
+2016-08-22 16:06:44,604 DEBUG [org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider] - <Returning the default principal id [casuser] for username.>
+2016-08-22 16:06:44,605 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Publishing org.apereo.cas.support.events.CasServiceTicketValidatedEvent@580fbe68[assertion=org.apereo.cas.authentication.DefaultAuthentication@b9a2dae8:https://localhost:8443/protected-web-app/,serviceTicket=ST-1-pbhtA5brbBiYabVpygfn-192]>
+2016-08-22 16:06:44,605 DEBUG [org.apereo.cas.ticket.support.MultiTimeUseOrTimeoutExpirationPolicy] - <Ticket usage count 1 is greater than or equal to 1>
+2016-08-22 16:06:44,606 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistry] - <Removing ticket [ST-1-pbhtA5brbBiYabVpygfn-192] from the registry.>
+2016-08-22 16:06:44,606 DEBUG [org.apereo.cas.audit.spi.ThreadLocalPrincipalResolver] - <Resolving principal at audit point [execution(Assertion org.apereo.cas.CentralAuthenticationServiceImpl.validateServiceTicket(String,Service))]>
+2016-08-22 16:06:44,606 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: casuser
+WHAT: ST-1-pbhtA5brbBiYabVpygfn-192
+ACTION: SERVICE_TICKET_VALIDATED
+APPLICATION: CAS
+WHEN: Mon Aug 22 16:06:44 EDT 2016
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
+2016-08-22 16:06:44,612 DEBUG [org.apereo.cas.web.ServiceValidateController] - <Locating the primary authentication associated with this service request https://localhost:8443/protected-web-app/>
+2016-08-22 16:06:44,615 DEBUG [org.apereo.cas.web.ServiceValidateController] - <No particular authentication context is required for this request>
+1
+3
+4
+Found pgtIou
+pgtIou is PGTIOU-1-7yy0ry5XFQm7QV9qj4UIiDYFtXc4lTaTe7pXGbdkbpOXfWkR0d-192 pgtId is PGT-2-dyZ9fNXg9XDkqacjfhwaSmhnbbtR4SZYppdHeHSesunTXHHiQA-192
+2016-08-22 16:06:44,622 DEBUG [org.apereo.cas.util.http.SimpleHttpClient] - <Response code from server matched 200.>
+2016-08-22 16:06:44,623 DEBUG [org.apereo.cas.ticket.proxy.support.Cas20ProxyHandler] - <Sent ProxyIou of PGTIOU-*************************************************bpOXfWkR0d-192 for service: https://localhost:8443/protected-web-app/proxyUrl>
+2016-08-22 16:06:44,623 DEBUG [org.apereo.cas.web.ServiceValidateController] - <Successfully validated service ticket ST-1-pbhtA5brbBiYabVpygfn-192 for service [https://localhost:8443/protected-web-app/]>
+2016-08-22 16:06:44,624 DEBUG [org.apereo.cas.web.view.Cas20ResponseView] - <Preparing the output model to render view...>
+1
+2
+Getting pgtId for pgtIou: PGTIOU-1-7yy0ry5XFQm7QV9qj4UIiDYFtXc4lTaTe7pXGbdkbpOXfWkR0d-192
+pgtId for pgtIou was: PGT-2-dyZ9fNXg9XDkqacjfhwaSmhnbbtR4SZYppdHeHSesunTXHHiQA-192
+2016-08-22 16:06:44,881 DEBUG [org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository] - <DefaultPrincipalAttributesRepository will return the collection of attributes directly associated with the principal object which are [{uid=uid, cn=commonName, affiliation=groupMembership, displayName=displayName, username=casuser}]>
+2016-08-22 16:06:44,881 DEBUG [org.apereo.cas.authentication.principal.cache.AbstractPrincipalAttributesRepository] - <Found [5] cached attributes for principal [casuser] that are {uid=uid, cn=commonName, affiliation=groupMembership, displayName=displayName, username=casuser}>
+2016-08-22 16:06:44,881 DEBUG [org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy] - <Skipping access strategy policy, since no attributes rules are defined>
+2016-08-22 16:06:44,881 DEBUG [org.apereo.cas.services.RegisteredServiceAccessStrategyUtils] - <Current authentication via ticket PGT-**********************************************sunTXHHiQA-192 allows service https://localhost:8443/protected-web-app/ to participate in the existing SSO session>
+2016-08-22 16:06:44,882 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <TGT-TGT is proxied by [https://localhost:8443/protected-web-app/]. Locating proxy service in registry...>
+2016-08-22 16:06:44,882 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Located proxying service [id=52497044623302,name=CAS Example Protected Web Application via TLS,description=Services Management Web Application,serviceId=https://localhost:8443/protected-web-app.*,usernameAttributeProvider=org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider@d,theme=<null>,evaluationOrder=1,logoutType=BACK_CHANNEL,attributeReleasePolicy=org.apereo.cas.services.ReturnAllAttributeReleasePolicy@51eb27ad[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@46dbd01c[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false],accessStrategy=org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy@4cd0cf32[enabled=true,ssoEnabled=true,requireAllAttributes=true,requiredAttributes={},unauthorizedRedirectUrl=<null>,caseInsensitive=false,rejectedAttributes={}],publicKey=<null>,proxyPolicy=org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy@64fe8c3[^https?://.*],logo=<null>,logoutUrl=<null>,requiredHandlers=[],properties={},multifactorPolicy=org.apereo.cas.services.DefaultRegisteredServiceMultifactorPolicy@e1171e8[multifactorAuthenticationProviders=[],failureMode=CLOSED,principalAttributeNameTrigger=<null>,principalAttributeValueToMatch=<null>],<null>] in the service registry>
+2016-08-22 16:06:44,882 DEBUG [org.apereo.cas.ticket.DefaultProxyTicketFactory] - <Looking up ticket id generator for [org.apereo.cas.authentication.principal.SimpleWebApplicationServiceImpl]>
+2016-08-22 16:06:44,883 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistry] - <Added ticket [PGT-**********************************************sunTXHHiQA-192] to registry.>
+2016-08-22 16:06:44,884 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistry] - <Added ticket [PT-2-f96UqRibdLcYREKZhh9N-192] to registry.>
+2016-08-22 16:06:44,884 INFO [org.apereo.cas.CentralAuthenticationServiceImpl] - <Granted ticket [PT-2-f96UqRibdLcYREKZhh9N-192] for service [https://localhost:8443/protected-web-app/] for user [casuser]>
+2016-08-22 16:06:44,884 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Publishing org.apereo.cas.support.events.CasProxyTicketGrantedEvent@32c54718[proxyGrantingTicket=PGT-**********************************************sunTXHHiQA-192,proxyTicket=PT-2-f96UqRibdLcYREKZhh9N-192]>
+2016-08-22 16:06:44,885 DEBUG [org.apereo.cas.audit.spi.ThreadLocalPrincipalResolver] - <Resolving principal at audit point [execution(ProxyTicket org.apereo.cas.CentralAuthenticationServiceImpl.grantProxyTicket(String,Service))]>
+2016-08-22 16:06:44,885 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: casuser
+WHAT: PT-2-f96UqRibdLcYREKZhh9N-192 for https://localhost:8443/protected-web-app/
+ACTION: PROXY_TICKET_CREATED
+APPLICATION: CAS
+WHEN: Mon Aug 22 16:06:44 EDT 2016
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
+2016-08-22 16:06:44,894 DEBUG [org.apereo.cas.web.support.DefaultArgumentExtractor] - <Created https://localhost:8443/protected-web-app/ based on org.apereo.cas.authentication.principal.WebApplicationServiceFactory@25d4f63b>
+2016-08-22 16:06:44,895 DEBUG [org.apereo.cas.web.support.DefaultArgumentExtractor] - <Extractor generated service type org.apereo.cas.authentication.principal.SimpleWebApplicationServiceImpl for: https://localhost:8443/protected-web-app/>
+2016-08-22 16:06:44,898 DEBUG [org.apereo.cas.web.support.DefaultArgumentExtractor] - <Created https://localhost:8443/protected-web-app/ based on org.apereo.cas.authentication.principal.WebApplicationServiceFactory@25d4f63b>
+2016-08-22 16:06:44,898 DEBUG [org.apereo.cas.web.support.DefaultArgumentExtractor] - <Extractor generated service type org.apereo.cas.authentication.principal.SimpleWebApplicationServiceImpl for: https://localhost:8443/protected-web-app/>
+2016-08-22 16:06:44,923 DEBUG [org.apereo.cas.web.support.DefaultArgumentExtractor] - <Created https://localhost:8443/protected-web-app/ based on org.apereo.cas.authentication.principal.WebApplicationServiceFactory@25d4f63b>
+2016-08-22 16:06:44,923 DEBUG [org.apereo.cas.web.support.DefaultArgumentExtractor] - <Extractor generated service type org.apereo.cas.authentication.principal.SimpleWebApplicationServiceImpl for: https://localhost:8443/protected-web-app/>
+2016-08-22 16:06:44,924 DEBUG [org.apereo.cas.authentication.RegisteredServiceAuthenticationHandlerResolver] - <Authentication handlers used for this transaction are [org.apereo.cas.authentication.handler.support.HttpBasedServiceCredentialsAuthenticationHandler@6b53cbb3, org.apereo.cas.authentication.AcceptUsersAuthenticationHandler@1cdadf92]>
+2016-08-22 16:06:44,924 DEBUG [org.apereo.cas.authentication.handler.support.HttpBasedServiceCredentialsAuthenticationHandler] - <Attempting to authenticate https://localhost:8443/protected-web-app/proxyUrl>
+2016-08-22 16:06:44,925 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - <Connecting socket to localhost/127.0.0.1:8443 with timeout 5000>
+2016-08-22 16:06:44,927 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - <Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]>
+2016-08-22 16:06:44,927 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - <Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]>
+2016-08-22 16:06:44,928 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - <Starting handshake>
+2016-08-22 16:06:44,931 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - <Secure session established>
+2016-08-22 16:06:44,932 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - < negotiated protocol: TLSv1.2>
+2016-08-22 16:06:44,933 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - < negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256>
+2016-08-22 16:06:44,933 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - < peer principal: CN=localhost, OU=xxxx, O=xxxx, L=xxxxxx, ST=XX, C=US>
+2016-08-22 16:06:44,934 DEBUG [org.apereo.cas.authentication.FileTrustStoreSslSocketFactory] - < issuer principal: CN=localhost, OU=xxxx, O=xxxx, L=xxxxxx, ST=XX, C=US>
+1
+3
+2016-08-22 16:06:44,936 DEBUG [org.apereo.cas.util.http.SimpleHttpClient] - <Response code from server matched 200.>
+2016-08-22 16:06:44,936 INFO [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <HttpBasedServiceCredentialsAuthenticationHandler successfully authenticated https://localhost:8443/protected-web-app/proxyUrl>
+2016-08-22 16:06:44,937 DEBUG [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <org.apereo.cas.authentication.principal.BasicPrincipalResolver@16daff9d resolved https://localhost:8443/protected-web-app/proxyUrl from https://localhost:8443/protected-web-app/proxyUrl>
+2016-08-22 16:06:44,937 DEBUG [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <Final principal resolved for this authentication event is https://localhost:8443/protected-web-app/proxyUrl>
+2016-08-22 16:06:44,937 INFO [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <Authenticated https://localhost:8443/protected-web-app/proxyUrl with credentials [https://localhost:8443/protected-web-app/proxyUrl].>
+2016-08-22 16:06:44,937 DEBUG [org.apereo.cas.authentication.PolicyBasedAuthenticationManager] - <Attribute map for https://localhost:8443/protected-web-app/proxyUrl: {}>
+2016-08-22 16:06:44,938 DEBUG [org.apereo.cas.audit.spi.ThreadLocalPrincipalResolver] - <Resolving principal at audit point [execution(Authentication org.apereo.cas.authentication.AbstractAuthenticationManager.authenticate(AuthenticationTransaction))]>
+2016-08-22 16:06:44,938 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: https://localhost:8443/protected-web-app/proxyUrl
+WHAT: Supplied credentials: [https://localhost:8443/protected-web-app/proxyUrl]
+ACTION: AUTHENTICATION_SUCCESS
+APPLICATION: CAS
+WHEN: Mon Aug 22 16:06:44 EDT 2016
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
+2016-08-22 16:06:44,938 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationTransactionManager] - <Successful authentication; Collecting authentication result [org.apereo.cas.authentication.DefaultAuthentication@4eb07467]>
+2016-08-22 16:06:44,938 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collecting authentication history based on [1] authentication events>
+2016-08-22 16:06:44,939 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Evaluating authentication principal [https://localhost:8443/protected-web-app/proxyUrl] for inclusion in result>
+2016-08-22 16:06:44,939 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected principal attributes [{}] for inclusion in this result for principal [https://localhost:8443/protected-web-app/proxyUrl]>
+2016-08-22 16:06:44,939 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected single authentication attribute [authenticationMethod] -> [HttpBasedServiceCredentialsAuthenticationHandler]>
+2016-08-22 16:06:44,939 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected single authentication attribute [successfulAuthenticationHandlers] -> [[HttpBasedServiceCredentialsAuthenticationHandler]]>
+2016-08-22 16:06:44,939 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Finalized authentication attributes [{authenticationMethod=HttpBasedServiceCredentialsAuthenticationHandler, successfulAuthenticationHandlers=[HttpBasedServiceCredentialsAuthenticationHandler]}] for inclusion in this authentication result>
+2016-08-22 16:06:44,939 DEBUG [org.apereo.cas.authentication.DefaultPrincipalElectionStrategy] - <Nominated [https://localhost:8443/protected-web-app/proxyUrl] as the primary principal>
+2016-08-22 16:06:44,940 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Determined primary authentication principal to be [https://localhost:8443/protected-web-app/proxyUrl]>
+2016-08-22 16:06:44,940 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Collected authentication attributes for this result are [{authenticationMethod=HttpBasedServiceCredentialsAuthenticationHandler, successfulAuthenticationHandlers=[HttpBasedServiceCredentialsAuthenticationHandler]}]>
+2016-08-22 16:06:44,940 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Authentication result commenced at [2016-08-22T16:06:44.940-04:00[America/New_York]]>
+2016-08-22 16:06:44,940 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationResultBuilder] - <Building an authentication result for authentication org.apereo.cas.authentication.DefaultAuthentication@18a75867 and service https://localhost:8443/protected-web-app/>
+2016-08-22 16:06:44,941 DEBUG [org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository] - <DefaultPrincipalAttributesRepository will return the collection of attributes directly associated with the principal object which are [{}]>
+2016-08-22 16:06:44,941 DEBUG [org.apereo.services.persondir.support.CachingPersonAttributeDaoImpl] - <Created seed map='{username=[https://localhost:8443/protected-web-app/proxyUrl]}' for uid='https://localhost:8443/protected-web-app/proxyUrl'>
+2016-08-22 16:06:44,941 DEBUG [org.apereo.services.persondir.support.AttributeBasedCacheKeyGenerator] - <Generated cache Map {username=[https://localhost:8443/protected-web-app/proxyUrl]} from seed Map {username=[https://localhost:8443/protected-web-app/proxyUrl]}>
+2016-08-22 16:06:44,941 DEBUG [org.apereo.services.persondir.support.AttributeBasedCacheKeyGenerator] - <Generated cache key '-1811948958|-1811987438' for MethodInvocation='org.apereo.services.persondir.support.CachingPersonAttributeDaoImpl$PersonAttributeDaoMethodInvocation@79f5fa5d'>
+2016-08-22 16:06:44,942 DEBUG [org.apereo.services.persondir.support.MergingPersonAttributeDaoImpl] - <Retrieved attributes='[AttributeNamedPersonImpl[name=https://localhost:8443/protected-web-app/proxyUrl,attributes={uid=[uid], cn=[commonName], affiliation=[groupMembership], displayName=[displayName], username=[https://localhost:8443/protected-web-app/proxyUrl]}]]' for query='{username=[https://localhost:8443/protected-web-app/proxyUrl]}', isFirstQuery=false, currentlyConsidering='org.apereo.services.persondir.support.NamedStubPersonAttributeDao@6f36ea71', resultAttributes='null'>
+2016-08-22 16:06:44,942 DEBUG [org.apereo.services.persondir.support.MergingPersonAttributeDaoImpl] - <Aggregated search results '[AttributeNamedPersonImpl[name=https://localhost:8443/protected-web-app/proxyUrl,attributes={uid=[uid], cn=[commonName], affiliation=[groupMembership], displayName=[displayName], username=[https://localhost:8443/protected-web-app/proxyUrl]}]]' for query='{username=[https://localhost:8443/protected-web-app/proxyUrl]}'>
+2016-08-22 16:06:44,942 DEBUG [org.apereo.services.persondir.support.CachingPersonAttributeDaoImpl] - <Retrieved query from wrapped IPersonAttributeDao and stored in cache for stubAttributeRepository. key='-1811948958|-1811987438', results='[AttributeNamedPersonImpl[name=https://localhost:8443/protected-web-app/proxyUrl,attributes={uid=[uid], cn=[commonName], affiliation=[groupMembership], displayName=[displayName], username=[https://localhost:8443/protected-web-app/proxyUrl]}]]'>
+2016-08-22 16:06:44,942 DEBUG [org.apereo.services.persondir.support.CachingPersonAttributeDaoImpl.statistics] - <Cache Stats stubAttributeRepository: queries=3, hits=0, misses=3>
+2016-08-22 16:06:44,943 DEBUG [org.apereo.cas.authentication.principal.cache.AbstractPrincipalAttributesRepository] - <Found [5] attributes for principal [https://localhost:8443/protected-web-app/proxyUrl] from the attribute repository.>
+2016-08-22 16:06:44,943 DEBUG [org.apereo.cas.authentication.principal.cache.AbstractPrincipalAttributesRepository] - <No merging strategy found, so attributes retrieved from the repository will be used instead.>
+2016-08-22 16:06:44,943 DEBUG [org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository] - <Using https://localhost:8443/protected-web-app/proxyUrl, no caching takes place for DefaultPrincipalAttributesRepository to add attributes.>
+2016-08-22 16:06:44,943 DEBUG [org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy] - <Skipping access strategy policy, since no attributes rules are defined>
+2016-08-22 16:06:44,944 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Generated proxy granting ticket [PGT-**********************************************gkVebaqLjm-192] based off of [PT-2-f96UqRibdLcYREKZhh9N-192]>
+2016-08-22 16:06:44,944 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistry] - <Added ticket [PGT-**********************************************gkVebaqLjm-192] to registry.>
+2016-08-22 16:06:44,944 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Publishing org.apereo.cas.support.events.CasProxyGrantingTicketCreatedEvent@64cae2ff[ticketGrantingTicket=PGT-**********************************************gkVebaqLjm-192]>
+2016-08-22 16:06:44,944 DEBUG [org.apereo.cas.audit.spi.ThreadLocalPrincipalResolver] - <Resolving principal at audit point [execution(ProxyGrantingTicket org.apereo.cas.CentralAuthenticationServiceImpl.createProxyGrantingTicket(String,AuthenticationResult))]>
+2016-08-22 16:06:44,945 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: https://localhost:8443/protected-web-app/proxyUrl
+WHAT: PGT-**********************************************gkVebaqLjm-192
+ACTION: PROXY_GRANTING_TICKET_CREATED
+APPLICATION: CAS
+WHEN: Mon Aug 22 16:06:44 EDT 2016
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
+2016-08-22 16:06:44,945 DEBUG [org.apereo.cas.web.ProxyValidateController] - <Generated proxy-granting ticket [PGT-**********************************************gkVebaqLjm-192] off of service ticket [PT-2-f96UqRibdLcYREKZhh9N-192] and credential [https://localhost:8443/protected-web-app/proxyUrl]>
+2016-08-22 16:06:44,945 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Located registered service definition id=52497044623302,name=CAS Example Protected Web Application via TLS,description=Services Management Web Application,serviceId=https://localhost:8443/protected-web-app.*,usernameAttributeProvider=org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider@d,theme=<null>,evaluationOrder=1,logoutType=BACK_CHANNEL,attributeReleasePolicy=org.apereo.cas.services.ReturnAllAttributeReleasePolicy@51eb27ad[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@46dbd01c[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false],accessStrategy=org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy@4cd0cf32[enabled=true,ssoEnabled=true,requireAllAttributes=true,requiredAttributes={},unauthorizedRedirectUrl=<null>,caseInsensitive=false,rejectedAttributes={}],publicKey=<null>,proxyPolicy=org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy@64fe8c3[^https?://.*],logo=<null>,logoutUrl=<null>,requiredHandlers=[],properties={},multifactorPolicy=org.apereo.cas.services.DefaultRegisteredServiceMultifactorPolicy@e1171e8[multifactorAuthenticationProviders=[],failureMode=CLOSED,principalAttributeNameTrigger=<null>,principalAttributeValueToMatch=<null>],<null> from https://localhost:8443/protected-web-app/ to handle validation request>
+2016-08-22 16:06:44,946 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Attribute policy [org.apereo.cas.services.ReturnAllAttributeReleasePolicy@51eb27ad[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@46dbd01c[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false]] is associated with service [id=52497044623302,name=CAS Example Protected Web Application via TLS,description=Services Management Web Application,serviceId=https://localhost:8443/protected-web-app.*,usernameAttributeProvider=org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider@d,theme=<null>,evaluationOrder=1,logoutType=BACK_CHANNEL,attributeReleasePolicy=org.apereo.cas.services.ReturnAllAttributeReleasePolicy@51eb27ad[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@46dbd01c[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false],accessStrategy=org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy@4cd0cf32[enabled=true,ssoEnabled=true,requireAllAttributes=true,requiredAttributes={},unauthorizedRedirectUrl=<null>,caseInsensitive=false,rejectedAttributes={}],publicKey=<null>,proxyPolicy=org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy@64fe8c3[^https?://.*],logo=<null>,logoutUrl=<null>,requiredHandlers=[],properties={},multifactorPolicy=org.apereo.cas.services.DefaultRegisteredServiceMultifactorPolicy@e1171e8[multifactorAuthenticationProviders=[],failureMode=CLOSED,principalAttributeNameTrigger=<null>,principalAttributeValueToMatch=<null>],<null>]>
+2016-08-22 16:06:44,946 DEBUG [org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository] - <DefaultPrincipalAttributesRepository will return the collection of attributes directly associated with the principal object which are [{uid=uid, cn=commonName, affiliation=groupMembership, displayName=displayName, username=casuser}]>
+2016-08-22 16:06:44,946 DEBUG [org.apereo.cas.authentication.principal.cache.AbstractPrincipalAttributesRepository] - <Found [5] cached attributes for principal [casuser] that are {uid=uid, cn=commonName, affiliation=groupMembership, displayName=displayName, username=casuser}>
+2016-08-22 16:06:44,947 DEBUG [org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider] - <Returning the default principal id [casuser] for username.>
+2016-08-22 16:06:44,947 DEBUG [org.apereo.cas.CentralAuthenticationServiceImpl] - <Publishing org.apereo.cas.support.events.CasServiceTicketValidatedEvent@652602f4[assertion=org.apereo.cas.authentication.DefaultAuthentication@b9a2dae8:https://localhost:8443/protected-web-app/,serviceTicket=PT-2-f96UqRibdLcYREKZhh9N-192]>
+2016-08-22 16:06:44,947 DEBUG [org.apereo.cas.ticket.support.MultiTimeUseOrTimeoutExpirationPolicy] - <Ticket usage count 1 is greater than or equal to 1>
+2016-08-22 16:06:44,947 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistry] - <Removing ticket [PT-2-f96UqRibdLcYREKZhh9N-192] from the registry.>
+2016-08-22 16:06:44,948 DEBUG [org.apereo.cas.audit.spi.ThreadLocalPrincipalResolver] - <Resolving principal at audit point [execution(Assertion org.apereo.cas.CentralAuthenticationServiceImpl.validateServiceTicket(String,Service))]>
+2016-08-22 16:06:44,948 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: casuser
+WHAT: PT-2-f96UqRibdLcYREKZhh9N-192
+ACTION: SERVICE_TICKET_VALIDATED
+APPLICATION: CAS
+WHEN: Mon Aug 22 16:06:44 EDT 2016
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
+2016-08-22 16:06:44,949 WARN [org.apereo.cas.web.ProxyValidateController] - <Service ticket [PT-2-f96UqRibdLcYREKZhh9N-192] does not satisfy validation specification.>
+2016-08-22 16:06:44,951 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:custom_messages_en_US] for the code [INVALID_TICKET]>
+2016-08-22 16:06:44,952 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <No properties file found for [classpath:custom_messages_en_US] - neither plain properties nor XML>
+2016-08-22 16:06:44,952 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:messages_en_US] for the code [INVALID_TICKET]>
+2016-08-22 16:06:44,953 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <No properties file found for [classpath:messages_en_US] - neither plain properties nor XML>
+2016-08-22 16:06:44,953 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <The code [INVALID_TICKET] cannot be found in the language bundle for the locale [en_US]>
+2016-08-22 16:06:44,954 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <No properties file found for [classpath:custom_messages_en] - neither plain properties nor XML>
+2016-08-22 16:06:44,955 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <No properties file found for [classpath:custom_messages] - neither plain properties nor XML>
+2016-08-22 16:06:44,955 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <No properties file found for [classpath:messages_en] - neither plain properties nor XML>
+2016-08-22 16:06:44,956 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Loading properties [messages.properties] with encoding 'UTF-8'>
+1
+2
+Getting pgtId for pgtIou: 
+pgtId for pgtIou was: null
+2016-08-22 16:06:46,322 DEBUG [org.apereo.cas.web.support.TGCCookieRetrievingCookieGenerator] - <Removed cookie with name [TGC]>
+2016-08-22 16:06:46,322 DEBUG [org.apereo.cas.web.WarningCookieRetrievingCookieGenerator] - <Removed cookie with name [CASPRIVACY]>
+2016-08-22 16:06:46,328 DEBUG [org.apereo.cas.authentication.principal.WebApplicationServiceFactory] - <No service is specified in the request. Skipping service creation>
+2016-08-22 16:06:46,328 DEBUG [org.apereo.cas.web.support.DefaultArgumentExtractor] - <No service could be extracted based on the given request>
+2016-08-22 16:06:46,329 DEBUG [org.apereo.cas.web.support.DefaultArgumentExtractor] - <Extractor did not generate service.>
+2016-08-22 16:06:46,491 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:custom_messages_en_US] for the code [screen.logout.header]>
+2016-08-22 16:06:46,491 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:messages_en_US] for the code [screen.logout.header]>
+2016-08-22 16:06:46,491 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <The code [screen.logout.header] cannot be found in the language bundle for the locale [en_US]>
+2016-08-22 16:06:46,556 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:custom_messages_en_US] for the code [logo.title]>
+2016-08-22 16:06:46,557 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:messages_en_US] for the code [logo.title]>
+2016-08-22 16:06:46,557 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <The code [logo.title] cannot be found in the language bundle for the locale [en_US]>
+2016-08-22 16:06:46,560 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:custom_messages_en_US] for the code [screen.logout.header]>
+2016-08-22 16:06:46,560 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:messages_en_US] for the code [screen.logout.header]>
+2016-08-22 16:06:46,560 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <The code [screen.logout.header] cannot be found in the language bundle for the locale [en_US]>
+2016-08-22 16:06:46,561 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:custom_messages_en_US] for the code [screen.logout.success]>
+2016-08-22 16:06:46,561 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:messages_en_US] for the code [screen.logout.success]>
+2016-08-22 16:06:46,562 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <The code [screen.logout.success] cannot be found in the language bundle for the locale [en_US]>
+2016-08-22 16:06:46,562 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:custom_messages_en_US] for the code [screen.logout.security]>
+2016-08-22 16:06:46,562 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:messages_en_US] for the code [screen.logout.security]>
+2016-08-22 16:06:46,563 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <The code [screen.logout.security] cannot be found in the language bundle for the locale [en_US]>
+2016-08-22 16:06:46,564 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:custom_messages_en_US] for the code [copyright]>
+2016-08-22 16:06:46,564 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <Examining language bundle [classpath:messages_en_US] for the code [copyright]>
+2016-08-22 16:06:46,565 DEBUG [org.apereo.cas.web.view.CasReloadableMessageBundle] - <The code [copyright] cannot be found in the language bundle for the locale [en_US]>
+22-Aug-2016 16:06:52.127 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+22-Aug-2016 16:06:52.127 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8081"]
+22-Aug-2016 16:06:52.180 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8443"]
+22-Aug-2016 16:06:52.237 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+22-Aug-2016 16:06:52.292 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+22-Aug-2016 16:06:52.317 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [cas] created a ThreadLocal with key of type [com.codahale.metrics.ThreadLocalRandom$1] (value [com.codahale.metrics.ThreadLocalRandom$1@2196d6f5]) and a value of type [com.codahale.metrics.ThreadLocalRandom] (value [com.codahale.metrics.ThreadLocalRandom@46a2820c]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+22-Aug-2016 16:06:52.317 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [cas] created a ThreadLocal with key of type [com.codahale.metrics.ThreadLocalRandom$1] (value [com.codahale.metrics.ThreadLocalRandom$1@2196d6f5]) and a value of type [com.codahale.metrics.ThreadLocalRandom] (value [com.codahale.metrics.ThreadLocalRandom@3936a030]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+22-Aug-2016 16:06:52.317 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [cas] created a ThreadLocal with key of type [com.codahale.metrics.ThreadLocalRandom$1] (value [com.codahale.metrics.ThreadLocalRandom$1@2196d6f5]) and a value of type [com.codahale.metrics.ThreadLocalRandom] (value [com.codahale.metrics.ThreadLocalRandom@2c00055a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+2016-08-22 16:06:52,339 WARN [org.springframework.context.annotation.CommonAnnotationBeanPostProcessor] - <Invocation of destroy method failed on bean with name 'embeddedJsonServiceRegistry': java.lang.NullPointerException>
+22-Aug-2016 16:06:52.353 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8081"]
+22-Aug-2016 16:06:52.354 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8443"]
+22-Aug-2016 16:06:52.376 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+22-Aug-2016 16:06:52.377 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8081"]
+22-Aug-2016 16:06:52.377 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8443"]
+22-Aug-2016 16:06:52.378 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
